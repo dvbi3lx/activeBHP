@@ -17,27 +17,20 @@ export default function ViewTransitionLink({
   const router = useRouter();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // Prevent default navigation
     e.preventDefault();
 
     // Check if browser supports View Transitions API
-    if ('startViewTransition' in document) {
+    if (typeof document !== 'undefined' && 'startViewTransition' in document) {
       (document as any).startViewTransition(() => {
         startTransition(() => {
           router.push(href);
         });
       });
     } else {
-      // Fallback: Manual CSS animation
-      const main = document.querySelector('main');
-      if (main) {
-        main.style.animation = 'fadeOut 0.3s ease-out forwards';
-        setTimeout(() => {
-          router.push(href);
-        }, 300);
-      } else {
+      // Fallback to instant navigation
+      startTransition(() => {
         router.push(href);
-      }
+      });
     }
   };
 

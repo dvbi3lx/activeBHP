@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-background-dark pt-24 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          <div className="space-y-6 opacity-0-start animate-fade-in-up">
+          <div className="space-y-6">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-primary flex items-center justify-center rounded">
                 <span className="material-symbols-outlined text-black text-sm font-bold">shield</span>
@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="opacity-0-start animate-fade-in-up animation-delay-200">
+          <div>
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-8 text-white">Nawigacja</h4>
             <ul className="space-y-4">
               <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/">Strona Główna</ViewTransitionLink></li>
@@ -29,7 +29,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="opacity-0-start animate-fade-in-up animation-delay-300">
+          <div>
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-8 text-white">Nasze Usługi</h4>
             <ul className="space-y-4">
               <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/bhp">Nadzór BHP</ViewTransitionLink></li>
@@ -39,7 +39,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-8 opacity-0-start animate-fade-in-up animation-delay-400">
+          <div className="space-y-8">
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-8 text-white">Kontakt</h4>
             <div className="flex items-start gap-4">
               <span className="material-symbols-outlined text-primary text-xl">mail</span>
