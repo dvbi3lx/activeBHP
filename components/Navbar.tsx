@@ -23,11 +23,13 @@ export default function Navbar() {
             <ViewTransitionLink className={`text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors ${pathname === '/o-firmie' ? 'text-primary' : ''}`} href="/o-firmie">O firmie</ViewTransitionLink>
 
             <div className="relative group/menu">
-              <ViewTransitionLink className="text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors flex items-center gap-1" href="/uslugi/bhp">
+              <ViewTransitionLink className="text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors flex items-center gap-1" href="/uslugi">
                 Usługi <span className="material-symbols-outlined text-xs">expand_more</span>
               </ViewTransitionLink>
               <div className="absolute top-full left-0 pt-4 hidden group-hover/menu:block min-w-[200px]">
                 <div className="bg-card-dark border border-white/10 p-4 space-y-4 shadow-2xl">
+                  <ViewTransitionLink href="/uslugi" className="block text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors">Wszystkie Usługi</ViewTransitionLink>
+                  <div className="h-px bg-white/10 my-2"></div>
                   <ViewTransitionLink href="/uslugi/bhp" className="block text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors">Obsługa BHP</ViewTransitionLink>
                   <ViewTransitionLink href="/uslugi/ppoz" className="block text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors">Ochrona PPOŻ</ViewTransitionLink>
                   <ViewTransitionLink href="/uslugi/prawo-pracy" className="block text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors">Prawo Pracy</ViewTransitionLink>
