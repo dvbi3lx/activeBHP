@@ -9,9 +9,16 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "framer-motion": "^11.18.2",
     "next": "^15",
     "react": "^19",
     "react-dom": "^19"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

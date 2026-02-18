@@ -1,6 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'PPOŻ i Pierwsza Pomoc - Ochrona Przeciwpożarowa',
+  description: 'Kompleksowe usługi ochrony przeciwpożarowej: audyty PPOŻ, instrukcje bezpieczeństwa, próbne ewakuacje, szkolenia i wyposażenie apteczek. Pełna zgodność z przepisami.',
+  path: '/uslugi/ppoz',
+});
 
 export default function FireSafetyPage() {
   return (

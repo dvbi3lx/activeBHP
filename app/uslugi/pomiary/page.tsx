@@ -1,6 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'Pomiary i Badania UDT',
+  description: 'Pomiary czynników szkodliwych, badania hałasu, oświetlenia, pyłów. Przeglądy UDT urządzeń technicznych. Certyfikowane pomiary i dokumentacja zgodna z normami.',
+  path: '/uslugi/pomiary',
+});
 
 export default function MeasurementsPage() {
   return (

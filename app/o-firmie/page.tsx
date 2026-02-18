@@ -1,5 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'O Firmie - Poznaj Naszą Historię',
+  description: 'ActiveBHP - ponad 10 lat doświadczenia w bezpieczeństwie przemysłowym. Poznaj nasz zespół ekspertów, certyfikaty i setki zadowolonych klientów w całej Polsce.',
+  path: '/o-firmie',
+});
 
 export default function AboutPage() {
   return (
@@ -36,7 +43,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {reasons.map((reason, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center group opacity-0-start animate-fade-in-up" style={{ animationDelay: `${0.2 * index}s` }}>
                 <div className="w-20 h-20 bg-card-dark border border-white/10 flex items-center justify-center mx-auto mb-8 group-hover:bg-primary transition-colors duration-500">
                   <span className="material-symbols-outlined text-4xl text-primary group-hover:text-black">{reason.icon}</span>
                 </div>

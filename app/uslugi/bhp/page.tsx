@@ -1,6 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'Usługi BHP - Kompleksowa Obsługa Bezpieczeństwa',
+  description: 'Profesjonalne usługi BHP: audyty, nadzór, doradztwo, outsourcing służby BHP, szkolenia i pełna dokumentacja. Zapewniamy zgodność z przepisami i najwyższe standardy bezpieczeństwa.',
+  path: '/uslugi/bhp',
+});
 
 export default function BhpServicesPage() {
   return (

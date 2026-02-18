@@ -18,9 +18,9 @@ export default function ContactPage() {
         <div className="flex items-start gap-6">
           <div className="w-2 h-20 bg-primary shrink-0"></div>
           <div>
-            <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
+            <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
               Kontakt i Lokalizacja
-            </h2>
+            </h1>
             <p className="text-lg text-gray-400 max-w-2xl leading-relaxed font-medium">
               Zapewniamy najwyższe standardy bezpieczeństwa i higieny pracy. Skontaktuj się z naszym zespołem doradczym w celu optymalizacji procesów BHP w Twoim przedsiębiorstwie.
             </p>

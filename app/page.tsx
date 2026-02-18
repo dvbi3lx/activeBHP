@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'Profesjonalne Wsparcie BHP i PPOŻ',
+  description: 'Kompleksowe usługi BHP i ochrony przeciwpożarowej. Audyty, szkolenia, dokumentacja i stały nadzór. Zapewniamy pełną zgodność z przepisami i najwyższe standardy bezpieczeństwa.',
+  path: '/',
+});
 
 export default function Home() {
   return (
@@ -22,13 +29,12 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
-            Profesjonalne Wsparcie <br/>
-            <span className="text-primary">BHP i PPOŻ.</span>
+            Śpij spokojnie. <br/>
+            <span className="text-primary">My zadbamy o BHP.</span>
           </h1>
 
           <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-medium">
-            Ekspercka wiedza i nowoczesne podejście do bezpieczeństwa w Twojej firmie.
-            Zapewniamy pełną zgodność z przepisami i najwyższe standardy ochrony przemysłowej.
+            Przestań martwić się kontrolami i karami. Przejmujemy odpowiedzialność za bezpieczeństwo w Twojej firmie, abyś mógł skupić się na rozwoju biznesu. Gwarantujemy pełną zgodność z przepisami.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -59,22 +65,22 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-20">
             <div className="max-w-3xl">
-              <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Zakres Usług</span>
+              <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Co zyskujesz</span>
               <h2 className="text-5xl md:text-7xl font-black uppercase leading-none text-white">
-                Bezpieczeństwo w <br/>
-                <span className="text-outline">Twoim zasięgu.</span>
+                Korzyści dla <br/>
+                <span className="text-outline">Twojej Firmy.</span>
               </h2>
             </div>
             <div className="lg:max-w-sm border-l-4 border-primary pl-6 py-2">
               <p className="text-slate-400 font-medium">
-                Kompleksowe rozwiązania dostosowane do specyfiki Twojej branży. Od dokumentacji po stały nadzór operacyjny w standardzie Premium.
+                Oszczędzaj czas i pieniądze dzięki rozwiązaniom szytym na miarę. Unikniesz kar, wypadków i stresujących kontroli – zapewnimy Ci spokój i pewność, że wszystko jest pod kontrolą.
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
             {services.map((service, index) => (
-              <div key={index} className="bg-card-dark p-10 group hover:bg-primary transition-all duration-500">
+              <div key={index} className="bg-card-dark p-10 group hover:bg-primary transition-all duration-500 hover-lift">
                 <div className="w-14 h-14 bg-primary group-hover:bg-black flex items-center justify-center mb-8 transition-colors">
                   <span className="material-icons-outlined text-black group-hover:text-primary text-3xl">{service.icon}</span>
                 </div>
@@ -98,10 +104,10 @@ export default function Home() {
       <section className="py-32 bg-primary">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-7xl font-black text-black leading-tight mb-8 uppercase tracking-tighter">
-            Twoje bezpieczeństwo <br/> to nasza misja.
+            Zacznij działać <br/> bez stresu.
           </h2>
           <p className="text-black/70 text-lg md:text-xl font-bold max-w-2xl mx-auto mb-12 uppercase tracking-wide">
-            Zadbaj o standardy ActiveBHP w swojej firmie już dziś. Skontaktuj się z nami, aby otrzymać indywidualną wycenę dostosowaną do Twoich potrzeb.
+            Otrzymaj darmową konsultację i dowiedz się, jak w 48 godzin możesz mieć całą dokumentację BHP gotową. Bez papierologii, bez stresu – tylko rezultaty.
           </p>
           <Link
             href="/kontakt"
@@ -120,30 +126,30 @@ export default function Home() {
 const services = [
   {
     title: "Nadzór BHP",
-    description: "Stała opieka specjalisty, bieżąca kontrola warunków pracy oraz profesjonalne doradztwo techniczne.",
+    description: "Uniknij kar do 30 000 zł i stresujących kontroli PIP. Nasz specjalista zadba o zgodność z przepisami – Ty skupisz się na biznesie.",
     icon: "engineering",
     link: "/uslugi/bhp",
-    cta: "Sprawdź zakres"
+    cta: "Oszczędzaj czas"
   },
   {
     title: "Szkolenia",
-    description: "Wstępne i okresowe szkolenia BHP prowadzone w sposób merytoryczny, nowoczesny i angażujący.",
+    description: "Twoi pracownicy nauczą się, jak naprawdę bezpiecznie pracować. Zapomnij o nudnych prezentacjach – oferujemy praktyczną wiedzę, która chroni życie.",
     icon: "groups",
     link: "/szkolenia",
-    cta: "Zapisz zespół"
+    cta: "Chroń zespół"
   },
   {
     title: "PPOŻ",
-    description: "Ochrona przeciwpożarowa, instrukcje bezpieczeństwa oraz profesjonalne przeglądy sprzętu gaśniczego.",
+    description: "Śpij spokojnie wiedząc, że Twoja firma jest zabezpieczona przed pożarem. Zapewnimy instrukcje, przeglądy i szkolenia – wszystko w jednym miejscu.",
     icon: "fire_extinguisher",
     link: "/uslugi/ppoz",
-    cta: "Pełna oferta"
+    cta: "Zwiększ bezpieczeństwo"
   },
   {
     title: "Dokumentacja",
-    description: "Opracowanie oceny ryzyka zawodowego, instrukcji stanowiskowych oraz protokołów powypadkowych.",
+    description: "Przygotujemy za Ciebie całą dokumentację BHP w 48 godzin. Bez papierologii, bez stresu – po prostu gotowe rozwiązanie zgodne z prawem.",
     icon: "description",
     link: "/uslugi/prawo-pracy",
-    cta: "Zleć audyt"
+    cta: "Zamów dokumenty"
   }
 ];

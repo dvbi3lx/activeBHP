@@ -1,6 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'Prawo Pracy i Dokumentacja BHP',
+  description: 'Kompleksowa dokumentacja BHP: ocena ryzyka zawodowego, instrukcje stanowiskowe, regulaminy pracy, protokoły powypadkowe. Profesjonalne doradztwo w zakresie prawa pracy.',
+  path: '/uslugi/prawo-pracy',
+});
 
 export default function LaborLawPage() {
   return (

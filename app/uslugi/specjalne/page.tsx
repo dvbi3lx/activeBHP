@@ -1,6 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'Usługi Specjalne - Zaawansowane Rozwiązania BHP',
+  description: 'Specjalistyczne usługi BHP: koordynacja wielobranżowa, audyty międzynarodowe, systemy zarządzania bezpieczeństwem ISO 45001. Dedykowane rozwiązania dla dużych przedsiębiorstw.',
+  path: '/uslugi/specjalne',
+});
 
 export default function SpecialServicesPage() {
   return (

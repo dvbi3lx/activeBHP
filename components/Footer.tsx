@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ViewTransitionLink from './ViewTransitionLink';
 
 export default function Footer() {
   return (
@@ -20,21 +21,21 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-8 text-white">Nawigacja</h4>
             <ul className="space-y-4">
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/">Strona Główna</Link></li>
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/o-firmie">O firmie</Link></li>
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/bhp">Usługi</Link></li>
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/szkolenia">Szkolenia</Link></li>
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/kontakt">Kontakt</Link></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/">Strona Główna</ViewTransitionLink></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/o-firmie">O firmie</ViewTransitionLink></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/bhp">Usługi</ViewTransitionLink></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/szkolenia">Szkolenia</ViewTransitionLink></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/kontakt">Kontakt</ViewTransitionLink></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-8 text-white">Nasze Usługi</h4>
             <ul className="space-y-4">
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/bhp">Nadzór BHP</Link></li>
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/szkolenia">Szkolenia BHP</Link></li>
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/ppoz">Ochrona PPOŻ</Link></li>
-              <li><Link className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/prawo-pracy">Dokumentacja</Link></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/bhp">Nadzór BHP</ViewTransitionLink></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/szkolenia">Szkolenia BHP</ViewTransitionLink></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/ppoz">Ochrona PPOŻ</ViewTransitionLink></li>
+              <li><ViewTransitionLink className="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/uslugi/prawo-pracy">Dokumentacja</ViewTransitionLink></li>
             </ul>
           </div>
 
