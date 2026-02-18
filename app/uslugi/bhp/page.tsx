@@ -21,12 +21,12 @@ export default function BhpServicesPage() {
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
         </div>
         <div className="max-w-5xl mx-auto px-4 text-center z-10">
-          <div className="flex items-center justify-center gap-4 mb-6 opacity-0-start animate-fade-in-down">
+          <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-[1px] w-12 bg-primary"></div>
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Profesjonalne Rozwiązania</span>
             <div className="h-[1px] w-12 bg-primary"></div>
           </div>
-          <h1 className="text-6xl md:text-9xl font-black text-white leading-none mb-8 tracking-tighter uppercase opacity-0-start animate-fade-in-up animation-delay-200">
+          <h1 className="text-6xl md:text-9xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
             USŁUGI <span className="text-primary">BHP</span>
           </h1>
           <p className="text-slate-400 max-w-3xl mx-auto text-lg md:text-xl font-medium leading-relaxed">

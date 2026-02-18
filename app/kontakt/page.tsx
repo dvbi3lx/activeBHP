@@ -15,7 +15,7 @@ export default function ContactPage() {
 
       {/* Header Section */}
       <header className="pt-40 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="flex items-start gap-6 opacity-0-start animate-slide-in-left">
+        <div className="flex items-start gap-6">
           <div className="w-2 h-20 bg-primary shrink-0"></div>
           <div>
             <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
@@ -33,7 +33,7 @@ export default function ContactPage() {
         {/* Contact Info Cards */}
         <div className="lg:col-span-5 space-y-6">
           {contactInfo.map((info, index) => (
-            <div key={index} className="bg-card-dark p-8 border border-white/5 hover:border-primary/50 transition-colors group opacity-0-start animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
+            <div key={index} className="bg-card-dark p-8 border border-white/5 hover:border-primary/50 transition-colors group">
               <div className="flex items-start gap-6">
                 <div className="bg-primary p-3 rounded text-black group-hover:scale-110 transition-transform">
                   <span className="material-icons">{info.icon}</span>
@@ -60,7 +60,7 @@ export default function ContactPage() {
 
         {/* Contact Form */}
         <div className="lg:col-span-7">
-          <div className="bg-card-dark p-10 md:p-12 border border-white/10 opacity-0-start animate-fade-in animation-delay-400">
+          <div className="bg-card-dark p-10 md:p-12 border border-white/10">
             <h3 className="text-3xl font-black italic uppercase mb-10 tracking-tighter">Formularz Kontaktowy</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -20,15 +20,15 @@ export default function AboutPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-4 mb-6 opacity-0-start animate-fade-in-down">
+            <div className="flex items-center gap-4 mb-6">
               <div className="h-[2px] w-12 bg-primary"></div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Poznaj naszą historię</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase opacity-0-start animate-fade-in-up animation-delay-200">
+            <h1 className="text-6xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
               O NASZEJ <br/>
               <span className="text-primary">FIRMIE</span>
             </h1>
-            <p className="text-slate-400 text-lg md:text-xl mb-12 font-medium leading-relaxed opacity-0-start animate-fade-in animation-delay-400">
+            <p className="text-slate-400 text-lg md:text-xl mb-12 font-medium leading-relaxed">
               Od ponad dekady ActiveBHP definiuje nowe standardy w bezpieczeństwie przemysłowym. Nasza misja to nie tylko compliance, ale realna ochrona życia i zdrowia pracowników poprzez innowacyjne doradztwo i rzetelną edukację.
             </p>
           </div>

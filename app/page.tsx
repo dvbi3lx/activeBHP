@@ -22,23 +22,23 @@ export default function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 text-center z-10">
-          <div className="flex items-center justify-center gap-4 mb-6 opacity-0-start animate-fade-in-down">
+          <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-[1px] w-12 bg-primary"></div>
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">ActiveBHP Premium Safety</span>
             <div className="h-[1px] w-12 bg-primary"></div>
           </div>
 
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase opacity-0-start animate-fade-in-up animation-delay-200">
+          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
             Profesjonalne Wsparcie <br/>
             <span className="text-primary">BHP i PPOŻ.</span>
           </h1>
 
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-medium opacity-0-start animate-fade-in animation-delay-400">
+          <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-medium">
             Ekspercka wiedza i nowoczesne podejście do bezpieczeństwa w Twojej firmie.
             Zapewniamy pełną zgodność z przepisami i najwyższe standardy ochrony przemysłowej.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0-start animate-scale-in animation-delay-600">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/kontakt"
               className="bg-primary text-black px-10 py-5 font-black uppercase tracking-widest flex items-center gap-3 hover:bg-yellow-400 transition-all w-full sm:w-auto justify-center group"
@@ -81,7 +81,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
             {services.map((service, index) => (
-              <div key={index} className="bg-card-dark p-10 group hover:bg-primary transition-all duration-500 hover-lift opacity-0-start animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
+              <div key={index} className="bg-card-dark p-10 group hover:bg-primary transition-all duration-500 hover-lift">
                 <div className="w-14 h-14 bg-primary group-hover:bg-black flex items-center justify-center mb-8 transition-colors">
                   <span className="material-icons-outlined text-black group-hover:text-primary text-3xl">{service.icon}</span>
                 </div>
