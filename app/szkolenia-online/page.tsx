@@ -3,13 +3,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { createMetadata } from "@/lib/metadata";
-
-export const metadata = createMetadata({
-  title: 'Szkolenia Online - Platforma E-learningowa',
-  description: 'Już wkrótce - nowoczesna platforma e-learningowa ActiveBHP. Szkolenia BHP dostępne 24/7, stworzone specjalnie dla Twoich potrzeb.',
-  path: '/szkolenia-online',
-});
 
 export default function TrainingOnlinePage() {
   return (
