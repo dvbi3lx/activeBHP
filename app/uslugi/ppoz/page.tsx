@@ -1,6 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'PPOŻ i Pierwsza Pomoc - Ochrona Przeciwpożarowa',
+  description: 'Kompleksowe usługi ochrony przeciwpożarowej: audyty PPOŻ, instrukcje bezpieczeństwa, próbne ewakuacje, szkolenia i wyposażenie apteczek. Pełna zgodność z przepisami.',
+  path: '/uslugi/ppoz',
+});
 
 export default function FireSafetyPage() {
   return (
@@ -14,12 +21,12 @@ export default function FireSafetyPage() {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/10 blur-[120px] rounded-full"></div>
         </div>
         <div className="max-w-5xl mx-auto px-4 text-center z-10">
-          <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="flex items-center justify-center gap-4 mb-6 opacity-0-start animate-fade-in-down">
             <div className="h-[1px] w-12 bg-primary"></div>
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Ochrona Przeciwpożarowa</span>
             <div className="h-[1px] w-12 bg-primary"></div>
           </div>
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase opacity-0-start animate-fade-in-up animation-delay-200">
             PPOŻ I <span className="text-primary">PIERWSZA POMOC</span>
           </h1>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-medium">

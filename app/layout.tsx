@@ -1,20 +1,33 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Public_Sans } from "next/font/google";
 import "./globals.css";
+import { baseMetadata } from "@/lib/metadata";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin", "latin-ext"],
+  display: 'swap',
 });
 
 const publicSans = Public_Sans({
   variable: "--font-public-sans",
   subsets: ["latin", "latin-ext"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "ActiveBHP - Eksperci Bezpieczeństwa",
-  description: "Profesjonalne wsparcie BHP i PPOŻ dla Twojej firmy.",
+  ...baseMetadata,
+  title: {
+    default: 'ActiveBHP - Eksperci Bezpieczeństwa i Higieny Pracy',
+    template: '%s | ActiveBHP',
+  },
+  description: "Profesjonalne usługi BHP, PPOŻ i szkolenia. Audyty, dokumentacja, stały nadzór. Ponad 10 lat doświadczenia w branży bezpieczeństwa przemysłowego.",
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#FFD700',
 };
 
 export default function RootLayout({
@@ -43,6 +56,37 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${publicSans.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'ActiveBHP',
+              description: 'Profesjonalne usługi BHP, PPOŻ i szkolenia',
+              url: 'https://activebhp.pl',
+              logo: 'https://activebhp.pl/logo.png',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+48-500-600-700',
+                contactType: 'customer service',
+                areaServed: 'PL',
+                availableLanguage: 'Polish',
+              },
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'ul. Przemysłowa 44',
+                addressLocality: 'Poznań',
+                postalCode: '61-579',
+                addressCountry: 'PL',
+              },
+              sameAs: [
+                'https://facebook.com/activebhp',
+                'https://linkedin.com/company/activebhp',
+              ],
+            }),
+          }}
+        />
         {children}
       </body>
     </html>

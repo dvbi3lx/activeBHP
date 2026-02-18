@@ -1,5 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'O Firmie - Poznaj Naszą Historię',
+  description: 'ActiveBHP - ponad 10 lat doświadczenia w bezpieczeństwie przemysłowym. Poznaj nasz zespół ekspertów, certyfikaty i setki zadowolonych klientów w całej Polsce.',
+  path: '/o-firmie',
+});
 
 export default function AboutPage() {
   return (
@@ -13,15 +20,15 @@ export default function AboutPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-6 opacity-0-start animate-fade-in-down">
               <div className="h-[2px] w-12 bg-primary"></div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Poznaj naszą historię</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+            <h1 className="text-6xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase opacity-0-start animate-fade-in-up animation-delay-200">
               O NASZEJ <br/>
               <span className="text-primary">FIRMIE</span>
             </h1>
-            <p className="text-slate-400 text-lg md:text-xl mb-12 font-medium leading-relaxed">
+            <p className="text-slate-400 text-lg md:text-xl mb-12 font-medium leading-relaxed opacity-0-start animate-fade-in animation-delay-400">
               Od ponad dekady ActiveBHP definiuje nowe standardy w bezpieczeństwie przemysłowym. Nasza misja to nie tylko compliance, ale realna ochrona życia i zdrowia pracowników poprzez innowacyjne doradztwo i rzetelną edukację.
             </p>
           </div>
@@ -36,7 +43,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {reasons.map((reason, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center group opacity-0-start animate-fade-in-up" style={{ animationDelay: `${0.2 * index}s` }}>
                 <div className="w-20 h-20 bg-card-dark border border-white/10 flex items-center justify-center mx-auto mb-8 group-hover:bg-primary transition-colors duration-500">
                   <span className="material-symbols-outlined text-4xl text-primary group-hover:text-black">{reason.icon}</span>
                 </div>

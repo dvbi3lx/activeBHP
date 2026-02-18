@@ -1,8 +1,13 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
+  const pathname = usePathname();
+  
   return (
-    <nav className="fixed w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-white/10 opacity-0-start animate-fade-in-down">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center gap-2 group">
@@ -13,8 +18,8 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link className="text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/">Strona Główna</Link>
-            <Link className="text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/o-firmie">O firmie</Link>
+            <Link className={`text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors ${pathname === '/' ? 'text-primary' : ''}`} href="/">Strona Główna</Link>
+            <Link className={`text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors ${pathname === '/o-firmie' ? 'text-primary' : ''}`} href="/o-firmie">O firmie</Link>
 
             <div className="relative group/menu">
               <Link className="text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors flex items-center gap-1" href="/uslugi/bhp">
@@ -31,8 +36,8 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link className="text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/szkolenia">Szkolenia</Link>
-            <Link className="text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="/kontakt">Kontakt</Link>
+            <Link className={`text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors ${pathname === '/szkolenia' ? 'text-primary' : ''}`} href="/szkolenia">Szkolenia</Link>
+            <Link className={`text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors ${pathname === '/kontakt' ? 'text-primary' : ''}`} href="/kontakt">Kontakt</Link>
           </div>
 
           <div className="flex items-center gap-4">

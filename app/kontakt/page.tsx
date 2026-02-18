@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Head from 'next/head';
 
 export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -10,15 +11,20 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-background-dark text-white">
-      <Navbar />
+    <>
+      <Head>
+        <title>Kontakt - Skontaktuj Się z Nami | ActiveBHP</title>
+        <meta name="description" content="Skontaktuj się z ActiveBHP. Biuro: ul. Przemysłowa 44, Poznań. Tel: +48 500 600 700. Email: biuro@activebhp.pl. Zapytaj o bezpłatny audyt BHP." />
+      </Head>
+      <main className="min-h-screen bg-background-dark text-white">
+        <Navbar />
 
-      {/* Header Section */}
-      <header className="pt-40 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="flex items-start gap-6">
-          <div className="w-2 h-20 bg-primary shrink-0"></div>
-          <div>
-            <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
+        {/* Header Section */}
+        <header className="pt-40 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="flex items-start gap-6 opacity-0-start animate-slide-in-left">
+            <div className="w-2 h-20 bg-primary shrink-0"></div>
+            <div>
+              <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
               Kontakt i Lokalizacja
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl leading-relaxed font-medium">
@@ -33,7 +39,7 @@ export default function ContactPage() {
         {/* Contact Info Cards */}
         <div className="lg:col-span-5 space-y-6">
           {contactInfo.map((info, index) => (
-            <div key={index} className="bg-card-dark p-8 border border-white/5 hover:border-primary/50 transition-colors group">
+            <div key={index} className="bg-card-dark p-8 border border-white/5 hover:border-primary/50 transition-colors group opacity-0-start animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
               <div className="flex items-start gap-6">
                 <div className="bg-primary p-3 rounded text-black group-hover:scale-110 transition-transform">
                   <span className="material-icons">{info.icon}</span>
@@ -60,7 +66,7 @@ export default function ContactPage() {
 
         {/* Contact Form */}
         <div className="lg:col-span-7">
-          <div className="bg-card-dark p-10 md:p-12 border border-white/10">
+          <div className="bg-card-dark p-10 md:p-12 border border-white/10 opacity-0-start animate-fade-in animation-delay-400">
             <h3 className="text-3xl font-black italic uppercase mb-10 tracking-tighter">Formularz Kontaktowy</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -115,8 +121,9 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-background-dark/50 pointer-events-none"></div>
       </section>
 
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </>
   );
 }
 
