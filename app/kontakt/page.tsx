@@ -2,7 +2,6 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Head from 'next/head';
 
 export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -11,22 +10,17 @@ export default function ContactPage() {
   };
 
   return (
-    <>
-      <Head>
-        <title>Kontakt - Skontaktuj Się z Nami | ActiveBHP</title>
-        <meta name="description" content="Skontaktuj się z ActiveBHP. Biuro: ul. Przemysłowa 44, Poznań. Tel: +48 500 600 700. Email: biuro@activebhp.pl. Zapytaj o bezpłatny audyt BHP." />
-      </Head>
-      <main className="min-h-screen bg-background-dark text-white">
-        <Navbar />
+    <main className="min-h-screen bg-background-dark text-white">
+      <Navbar />
 
-        {/* Header Section */}
-        <header className="pt-40 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="flex items-start gap-6 opacity-0-start animate-slide-in-left">
-            <div className="w-2 h-20 bg-primary shrink-0"></div>
-            <div>
-              <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
+      {/* Header Section */}
+      <header className="pt-40 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="flex items-start gap-6 opacity-0-start animate-slide-in-left">
+          <div className="w-2 h-20 bg-primary shrink-0"></div>
+          <div>
+            <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
               Kontakt i Lokalizacja
-            </h2>
+            </h1>
             <p className="text-lg text-gray-400 max-w-2xl leading-relaxed font-medium">
               Zapewniamy najwyższe standardy bezpieczeństwa i higieny pracy. Skontaktuj się z naszym zespołem doradczym w celu optymalizacji procesów BHP w Twoim przedsiębiorstwie.
             </p>
@@ -121,9 +115,8 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-background-dark/50 pointer-events-none"></div>
       </section>
 
-        <Footer />
-      </main>
-    </>
+      <Footer />
+    </main>
   );
 }
 

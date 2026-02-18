@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import Head from 'next/head';
 
 export default function TrainingPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -14,13 +13,8 @@ export default function TrainingPage() {
   };
 
   return (
-    <>
-      <Head>
-        <title>Szkolenia BHP, UDT i Pierwsza Pomoc | ActiveBHP</title>
-        <meta name="description" content="Profesjonalne szkolenia BHP, uprawnienia UDT (wózki widłowe, suwnice), szkolenia hakowych i pierwsza pomoc. Certyfikaty uznawane w UE. Platforma e-learning 24/7." />
-      </Head>
-      <main className="min-h-screen bg-background-dark">
-        <Navbar />
+    <main className="min-h-screen bg-background-dark">
+      <Navbar />
 
       {/* Hero Section */}
       <header className="relative pt-20">
@@ -188,9 +182,8 @@ export default function TrainingPage() {
         </div>
       </section>
 
-        <Footer />
-      </main>
-    </>
+      <Footer />
+    </main>
   );
 }
 
