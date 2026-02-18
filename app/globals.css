@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
-@theme {
+@theme inline {
   --color-primary: #FFD700;
   --color-background-dark: #0A0A0A;
   --color-card-dark: #121212;
   --color-border-dark: #1F1F1F;
 
+  --font-sans: var(--font-inter), sans-serif;
   --font-display: var(--font-inter), sans-serif;
-  --font-public-sans: var(--font-public-sans), sans-serif;
+  --font-public-sans: 'Public Sans', sans-serif;
 
   --radius-default: 4px;
 }
