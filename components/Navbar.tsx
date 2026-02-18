@@ -40,6 +40,7 @@ export default function Navbar() {
             </div>
 
             <ViewTransitionLink className={`text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors ${pathname === '/szkolenia' ? 'text-primary' : ''}`} href="/szkolenia">Szkolenia</ViewTransitionLink>
+            <ViewTransitionLink className={`text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors ${pathname === '/szkolenia-online' ? 'text-primary' : ''}`} href="/szkolenia-online">Szkolenia Online</ViewTransitionLink>
             <ViewTransitionLink className={`text-[11px] font-bold uppercase tracking-widest hover:text-primary transition-colors ${pathname === '/kontakt' ? 'text-primary' : ''}`} href="/kontakt">Kontakt</ViewTransitionLink>
           </div>
 

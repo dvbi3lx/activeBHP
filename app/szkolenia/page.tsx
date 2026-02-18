@@ -3,6 +3,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: 'Szkolenia BHP, UDT i Pierwsza Pomoc',
+  description: 'Profesjonalne szkolenia BHP, uprawnienia UDT (wózki widłowe, suwnice), szkolenia hakowych i pierwsza pomoc. Certyfikaty uznawane w UE.',
+  path: '/szkolenia',
+});
 
 export default function TrainingPage() {
   return (
@@ -10,122 +17,112 @@ export default function TrainingPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-card-dark to-background-dark">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-[140px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-background-dark via-card-dark to-background-dark overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-primary rounded-full blur-[100px]"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/50 rounded-full blur-[120px]"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 text-center z-10">
-          <div className="inline-flex items-center gap-3 bg-primary/10 border border-primary px-6 py-3 mb-8 animate-pulse">
-            <span className="material-symbols-outlined text-primary text-xl">schedule</span>
-            <span className="text-primary font-black text-xs uppercase tracking-[0.3em]">Już Wkrótce</span>
+        <div className="max-w-5xl mx-auto px-4 text-center z-10 pt-20">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-[1px] w-12 bg-primary"></div>
+            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Profesjonalne Szkolenia</span>
+            <div className="h-[1px] w-12 bg-primary"></div>
           </div>
 
-          <h1 className="text-5xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] mb-8 tracking-tighter uppercase">
-            Szkolenia Online<br/>
-            <span className="text-primary">ActiveBHP</span>
+          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+            Szkolenia <span className="text-primary">BHP</span> i <span className="text-primary">UDT</span>
           </h1>
 
-          <p className="text-slate-300 max-w-3xl mx-auto text-xl md:text-2xl mb-6 font-bold leading-relaxed">
-            Przygotowujemy dla Ciebie rewolucyjną platformę e-learningową
-          </p>
-
-          <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg mb-12 font-medium leading-relaxed">
-            Tworzymy nowoczesne narzędzie, które zmieni sposób, w jaki szkolisz swój zespół. Zapomnij o nudnych prezentacjach – nasza platforma to prawdziwa edukacja, dostępna 24/7, stworzona specjalnie z myślą o Twoich potrzebach.
+          <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-medium">
+            Zdobądź kompetencje, które zwiększą bezpieczeństwo w Twojej firmie. Oferujemy szkolenia BHP, uprawnienia UDT i kursy pierwszej pomocy – wszystko z certyfikatami uznanymi w całej UE.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/kontakt" className="bg-primary text-black px-10 py-5 font-bold text-sm uppercase tracking-widest hover:bg-yellow-400 transition-all shadow-lg shadow-primary/20 w-full sm:w-auto text-center">
-              Powiadom mnie o starcie
+            <Link href="/kontakt" className="bg-primary text-black px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-yellow-400 transition-all shadow-lg shadow-primary/20">
+              Zapisz się na szkolenie
             </Link>
-            <a href="#features" className="border-2 border-white text-white px-10 py-5 font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-all w-full sm:w-auto text-center">
-              Dowiedz się więcej
-            </a>
+            <Link href="/szkolenia-online" className="border-2 border-primary text-primary px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-primary hover:text-black transition-all">
+              Platforma Online
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-24 bg-background-dark">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Dlaczego warto czekać?</span>
+      {/* Categories Section */}
+      <section className="py-24 bg-background-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Co oferujemy?</span>
             <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-6">
-              Platforma stworzona <span className="text-primary">dla Ciebie</span>
+              Kompleksowe <span className="text-primary">szkolenia</span>
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Pracujemy nad rozwiązaniem, które naprawdę zrozumie Twoje potrzeby i uczyni szkolenia BHP prostymi, skutecznymi i... przyjemnymi.
+              Przygotuj swój zespół do pracy w bezpiecznych warunkach dzięki naszym profesjonalnym szkoleniom dostosowanym do specyfiki Twojej branży.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {trainingCategories.map((category, index) => (
               <div key={index} className="bg-card-dark border border-white/10 p-8 hover:border-primary/50 transition-all hover-lift">
                 <div className="w-16 h-16 bg-primary/10 border border-primary flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined text-primary text-3xl">{feature.icon}</span>
+                  <span className="material-symbols-outlined text-primary text-3xl">{category.icon}</span>
                 </div>
-                <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-4">{feature.title}</h3>
-                <p className="text-slate-400 font-medium leading-relaxed">{feature.description}</p>
+                <h3 className="text-2xl font-black text-white uppercase tracking-tight mb-4">{category.title}</h3>
+                <p className="text-slate-400 font-medium leading-relaxed mb-6">{category.description}</p>
+                <ul className="space-y-3 mb-6">
+                  {category.points.map((point, pIndex) => (
+                    <li key={pIndex} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-primary mt-2 flex-shrink-0"></span>
+                      <span className="text-sm text-slate-300">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/kontakt" className="block text-center bg-primary/10 border border-primary text-primary px-6 py-3 font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-black transition-all">
+                  Zapytaj o termin
+                </Link>
               </div>
             ))}
-          </div>
-
-          <div className="bg-gradient-to-r from-primary/10 to-primary/5 border-l-4 border-primary p-12">
-            <div className="flex items-start gap-6">
-              <span className="material-symbols-outlined text-primary text-5xl">info</span>
-              <div>
-                <h3 className="text-2xl font-black text-white mb-4 uppercase">Tworzymy to razem z Tobą</h3>
-                <p className="text-slate-300 text-lg leading-relaxed mb-4">
-                  Nasza platforma powstaje w oparciu o realne potrzeby przedsiębiorców i zespołów BHP. Słuchamy Twoich uwag i sugestii, aby stworzyć narzędzie idealnie dopasowane do polskiego rynku.
-                </p>
-                <p className="text-slate-400 font-medium">
-                  Chcesz mieć wpływ na to, jak będzie wyglądała platforma? Skontaktuj się z nami i podziel się swoimi oczekiwaniami!
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-card-dark/50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-primary to-yellow-500 p-12 md:p-16 text-center">
-              <span className="material-symbols-outlined text-black text-6xl mb-6 inline-block">rocket_launch</span>
-              <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight mb-6">
-                Bądź pierwszy, który skorzysta!
+      <section className="py-24 bg-card-dark/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Dlaczego My?</span>
+              <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">
+                Szkolenia, które <span className="text-primary">naprawdę uczą</span>
               </h2>
-              <p className="text-black/80 text-lg font-bold mb-8 max-w-2xl mx-auto">
-                Zapisz się na listę oczekujących i otrzymaj specjalną ofertę startową oraz darmowy dostęp do pierwszych szkoleń.
+              <p className="text-slate-400 text-lg leading-relaxed mb-8">
+                Nasze szkolenia to nie nudne prezentacje – to praktyczna wiedza przekazywana przez doświadczonych specjalistów, którzy rozumieją realia pracy w polskich przedsiębiorstwach.
               </p>
-              <Link 
-                href="/kontakt" 
-                className="inline-block bg-black text-primary px-12 py-5 font-black uppercase tracking-[0.2em] text-sm hover:bg-slate-900 transition-all shadow-2xl"
-              >
-                Zapisz się na listę
-              </Link>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-primary/10 border border-primary flex items-center justify-center flex-shrink-0">
+                      <span className="material-symbols-outlined text-primary text-xl">{benefit.icon}</span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-black uppercase text-sm mb-1">{benefit.title}</h4>
+                      <p className="text-slate-400 text-sm">{benefit.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mt-16">
-            <div className="bg-background-dark border border-white/10 p-10">
-              <span className="material-symbols-outlined text-primary text-5xl mb-6 block">calendar_month</span>
-              <h3 className="text-2xl font-black text-white uppercase mb-4">Planowane uruchomienie</h3>
-              <p className="text-slate-400 text-lg leading-relaxed mb-4">
-                Intensywnie pracujemy nad każdym detalem, aby platforma była gotowa do użytku już niedługo.
-              </p>
-              <p className="text-primary font-bold">Spodziewaj się premier w najbliższych miesiącach!</p>
-            </div>
-
-            <div className="bg-background-dark border border-white/10 p-10">
-              <span className="material-symbols-outlined text-primary text-5xl mb-6 block">support_agent</span>
-              <h3 className="text-2xl font-black text-white uppercase mb-4">Dedykowane wsparcie</h3>
-              <p className="text-slate-400 text-lg leading-relaxed mb-4">
-                Po uruchomieniu platformy zapewnimy pełne wsparcie techniczne i merytoryczne dla wszystkich użytkowników.
-              </p>
-              <p className="text-primary font-bold">Zawsze dostępni, gdy potrzebujesz pomocy.</p>
+            <div className="relative">
+              <div className="aspect-square bg-gradient-to-br from-primary/20 to-transparent border border-primary/30 rounded-lg flex items-center justify-center">
+                <div className="text-center">
+                  <span className="material-symbols-outlined text-primary text-9xl mb-4 block">groups</span>
+                  <div className="text-white">
+                    <div className="text-6xl font-black mb-2">500+</div>
+                    <div className="text-sm uppercase tracking-widest text-slate-400">Przeszkolonych osób</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -133,20 +130,20 @@ export default function TrainingPage() {
 
       {/* CTA Section */}
       <section className="py-32 bg-background-dark">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <span className="text-primary text-xs font-bold tracking-[0.4em] uppercase mb-6 block">Masz pytania?</span>
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <span className="text-primary text-xs font-bold tracking-[0.4em] uppercase mb-6 block">Gotowy na szkolenie?</span>
           <h2 className="text-4xl md:text-7xl font-black uppercase leading-tight mb-8 tracking-tighter text-white">
-            Porozmawiajmy o <span className="text-primary">Twoich potrzebach</span>
+            Zainwestuj w <span className="text-primary">bezpieczeństwo</span>
           </h2>
           <p className="text-slate-400 text-lg font-medium max-w-2xl mx-auto mb-12 leading-relaxed">
-            Skontaktuj się z nami już dziś, aby dowiedzieć się więcej o platformie, zadać pytania lub zgłosić swoje sugestie. Twoja opinia ma dla nas ogromne znaczenie!
+            Skontaktuj się z nami, aby ustalić termin szkolenia dopasowanego do potrzeb Twojej firmy. Oferujemy elastyczne terminy i konkurencyjne ceny.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link href="/kontakt" className="bg-primary text-black px-12 py-6 font-black uppercase tracking-[0.2em] text-sm hover:bg-yellow-400 transition-colors w-full sm:w-auto shadow-2xl text-center">
-              Skontaktuj się z nami
+              Umów bezpłatną konsultację
             </Link>
-            <Link href="/o-firmie" className="border-2 border-white text-white px-12 py-6 font-black uppercase tracking-[0.2em] text-sm hover:bg-white hover:text-black transition-all w-full sm:w-auto text-center">
-              Poznaj ActiveBHP
+            <Link href="/szkolenia-online" className="border-2 border-white text-white px-12 py-6 font-black uppercase tracking-[0.2em] text-sm hover:bg-white hover:text-black transition-all w-full sm:w-auto text-center">
+              Zobacz platformę online
             </Link>
           </div>
         </div>
@@ -157,35 +154,61 @@ export default function TrainingPage() {
   );
 }
 
-const features = [
+const trainingCategories = [
   {
-    icon: "devices",
-    title: "Dostęp 24/7",
-    description: "Ucz się kiedy chcesz i gdzie chcesz. Nasza platforma będzie działać na komputerze, tablecie i smartfonie – zawsze pod ręką."
+    icon: "forklift",
+    title: "Uprawnienia UDT",
+    description: "Kompleksowe kursy operatorów urządzeń technicznych z egzaminem państwowym.",
+    points: [
+      "Wózki widłowe wszystkich kategorii",
+      "Suwnice i żurawie przemysłowe",
+      "Podnośniki nożycowe i teleskopowe",
+      "Certyfikat UDT"
+    ]
   },
   {
-    icon: "school",
-    title: "Praktyczna wiedza",
-    description: "Zapomnij o nudnych slajdach. Interaktywne szkolenia z przykładami z prawdziwego życia, które naprawdę uczą i angażują."
+    icon: "shield_person",
+    title: "Szkolenia BHP",
+    description: "Wstępne i okresowe szkolenia BHP dla wszystkich grup pracowniczych.",
+    points: [
+      "Szkolenia wstępne i okresowe",
+      "Stanowiska administracyjne i robotnicze",
+      "Szkolenia kadry kierowniczej",
+      "E-learning dostępny 24/7"
+    ]
   },
   {
-    icon: "workspace_premium",
+    icon: "medical_services",
+    title: "Pierwsza Pomoc i PPOŻ",
+    description: "Praktyczne szkolenia z pierwszej pomocy i ochrony przeciwpożarowej.",
+    points: [
+      "Pierwsza pomoc przedmedyczna",
+      "Obsługa sprzętu gaśniczego",
+      "Ewakuacja i procedury awaryjne",
+      "Certyfikaty zgodne z normami"
+    ]
+  }
+];
+
+const benefits = [
+  {
+    icon: "verified",
     title: "Certyfikaty UE",
-    description: "Po ukończeniu szkolenia otrzymasz certyfikat uznawany w całej Unii Europejskiej – wszystko zgodne z obowiązującymi przepisami."
+    description: "Wszystkie certyfikaty uznawane w całej Unii Europejskiej"
   },
   {
-    icon: "speed",
-    title: "Oszczędność czasu",
-    description: "Twój zespół może szkolić się bez oderwania od pracy. Elastyczny harmonogram dopasowany do Twoich potrzeb biznesowych."
+    icon: "schedule",
+    title: "Elastyczne terminy",
+    description: "Dopasowujemy harmonogram do Twoich potrzeb biznesowych"
   },
   {
-    icon: "savings",
-    title: "Niższe koszty",
-    description: "E-learning to oszczędność na wynajmie sal, materiałach szkoleniowych i czasie dojazdu. Więcej możliwości za mniej pieniędzy."
+    icon: "location_on",
+    title: "Szkolenia u Ciebie",
+    description: "Prowadzimy szkolenia w siedzibie Twojej firmy"
   },
   {
-    icon: "query_stats",
-    title: "Monitoring postępów",
-    description: "Zawsze będziesz wiedział, kto ukończył szkolenie, a kto potrzebuje wsparcia. Przejrzyste raporty i statystyki dostępne na żądanie."
+    icon: "support",
+    title: "Wsparcie po szkoleniu",
+    description: "Pomoc i doradztwo nawet po zakończeniu kursu"
   }
 ];
