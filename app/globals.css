@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FFD700;
+  --color-background-dark: #0A0A0A;
+  --color-card-dark: #121212;
+  --color-border-dark: #1F1F1F;
+
+  --font-display: var(--font-inter), sans-serif;
+  --font-public-sans: var(--font-public-sans), sans-serif;
+
+  --radius-default: 4px;
+}
+
+@layer base {
+  body {
+    @apply bg-background-dark text-white font-display antialiased selection:bg-primary selection:text-black;
+  }
+
+  /* Standard smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    color: transparent;
+  }
+
+  .hero-gradient {
+    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0a0a0a 100%);
+  }
+
+  .industrial-grid {
+    background-image: radial-gradient(#2a2a14 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .grayscale-hover {
+    @apply grayscale transition-all duration-500 hover:grayscale-0;
+  }
+
+  /* Animations */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+}
