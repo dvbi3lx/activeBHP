@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const baseMetadata = {
   metadataBase: new URL('https://activebhp.pl'),
   applicationName: 'ActiveBHP',
-  referrer: 'origin-when-cross-origin',
+  referrer: 'origin-when-cross-origin' as const,
   keywords: ['bhp', 'szkolenia bhp', 'bezpieczeństwo i higiena pracy', 'ochrona przeciwpożarowa', 'ppoż', 'audyty bhp', 'pierwsza pomoc', 'szkolenia udt', 'prawo pracy', 'dokumentacja bhp', 'nadzór bhp'],
   authors: [{ name: 'ActiveBHP' }],
   creator: 'ActiveBHP',
