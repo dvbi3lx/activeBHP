@@ -60,6 +60,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-24 bg-card-dark/50 border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Zobacz nas w akcji</span>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+              ActiveBHP <span className="text-primary">w praktyce</span>
+            </h2>
+          </div>
+          <div className="relative aspect-video bg-black rounded-lg overflow-hidden border-2 border-primary/20 shadow-2xl shadow-primary/10">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/UYbhQTa1M38"
+              title="ActiveBHP - Film promocyjny"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-24 bg-background-dark border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

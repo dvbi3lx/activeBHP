@@ -52,7 +52,15 @@ export default function Footer() {
               <span className="material-symbols-outlined text-primary text-xl">phone_in_talk</span>
               <div>
                 <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Zadzwoń</p>
-                <p className="text-sm font-bold text-white">+48 500 000 000</p>
+                <p className="text-sm font-bold text-white">+48 793 228 483</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="material-symbols-outlined text-primary text-xl">location_on</span>
+              <div>
+                <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Adres</p>
+                <p className="text-sm font-bold text-white">Powstańców Wielkopolskich 12/lok 28</p>
+                <p className="text-xs text-slate-400">91-040 Łódź</p>
               </div>
             </div>
           </div>
@@ -60,7 +68,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
-            © 2024 ACTIVEBHP SOLUTIONS. Wszystkie prawa zastrzeżone.
+            © {new Date().getFullYear()} ACTIVEBHP SOLUTIONS. Wszystkie prawa zastrzeżone.
           </p>
           <div className="flex gap-8">
             <Link className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors" href="/polityka-prywatnosci">Polityka prywatności</Link>

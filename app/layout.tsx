@@ -70,16 +70,16 @@ export default function RootLayout({
               logo: 'https://activebhp.pl/logo.png',
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+48-500-600-700',
+                telephone: '+48-793-228-483',
                 contactType: 'customer service',
                 areaServed: 'PL',
                 availableLanguage: 'Polish',
               },
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'ul. Przemysłowa 44',
-                addressLocality: 'Poznań',
-                postalCode: '61-579',
+                streetAddress: 'Powstańców Wielkopolskich 12/lok 28',
+                addressLocality: 'Łódź',
+                postalCode: '91-040',
                 addressCountry: 'PL',
               },
               sameAs: [

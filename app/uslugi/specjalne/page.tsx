@@ -56,7 +56,7 @@ export default function SpecialServicesPage() {
       </section>
 
       {/* Underwater Section */}
-      <section className="py-24 relative overflow-hidden bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDl6LPqc_EiKuWHqboVgVnGlk4bdLdxgz2Z-VN8ytPKwq2axrtrXlpGAT7qiVLPbEPOFBOfKICfdbrjOziegTW3hTXB9Sn4Shu3JPzYE6mbTUDBffdHeo6Vg5KavR4IgaPXDjV9omG_7rlvANxhocLO9Y3SsBh1lPXk2RXhfqRniceVd6f4oL0nBkhd-G4c-iTaNZ_UxcmW8s_TG147uOwXnXIE-U4pgTLCkbAom5WmQSrAXRh4qu4ni4c7Ygs6kfTBpBOCSKrY-YHg')" }}>
+      <section className="py-24 relative overflow-hidden bg-card-dark/50 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-16">
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Specjalizacja Głęboka</span>
@@ -67,7 +67,7 @@ export default function SpecialServicesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {underwaterItems.map((item, index) => (
-              <div key={index} className="bg-background-dark/80 backdrop-blur-sm border-l-4 border-primary p-8 hover:bg-background-dark transition-colors">
+              <div key={index} className="bg-card-dark border border-white/10 border-l-4 border-l-primary p-8 hover:border-primary/50 transition-colors">
                 <h4 className="text-primary font-black uppercase text-sm tracking-widest mb-4 leading-tight">{item.title}</h4>
                 <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
               </div>
