@@ -30,10 +30,7 @@ export async function submitContactForm(formData: FormData) {
       };
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return { success: false, error: 'Nieprawidłowy adres email' };
-    }
+    console.log('[v0] Sending to Web3Forms...');
 
     const formattedMessage = `
 Imię i nazwisko: ${name}
@@ -61,14 +58,18 @@ ${message}
 
     const result = await response.json();
 
+    console.log('[v0] Web3Forms result:', result);
+
     if (result.success) {
+      console.log('[v0] Form submitted successfully');
       return {
         success: true,
         message: 'Wiadomość została wysłana pomyślnie. Skontaktujemy się z Tobą wkrótce!'
       };
     }
 
-    return { success: false, error: 'Błąd wysyłania wiadomości' };
+    console.log('[v0] Web3Forms error:', result.message);
+    return { success: false, error: result.message || 'Błąd wysyłania wiadomości' };
 
   } catch (error) {
     console.error('[v0] Contact form error:', error);
@@ -79,5 +80,4 @@ ${message}
       error: `Błąd: ${errorMessage}`,
     };
   }
-}
 }
