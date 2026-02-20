@@ -3,7 +3,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from 'react';
-import { submitContactForm } from '../actions';
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,15 +14,42 @@ export default function ContactPage() {
     setSubmitStatus(null);
 
     const formData = new FormData(e.currentTarget);
+    
+    const name = formData.get('name') as string;
+    const phone = formData.get('phone') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
 
     try {
-      const result = await submitContactForm(formData);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '8f20ffee-bbc2-45b0-a86a-63701a50a493',
+          subject: `Nowe zapytanie z ActiveBHP od ${name}`,
+          from_name: name,
+          email: email,
+          message: `
+Imię i nazwisko: ${name}
+Telefon: ${phone}
+Email: ${email}
+
+Wiadomość:
+${message}
+          `.trim()
+        })
+      });
+
+      const result = await response.json();
 
       if (result.success) {
-        setSubmitStatus({ type: 'success', message: result.message || 'Wysłano!' });
+        setSubmitStatus({ type: 'success', message: 'Wiadomość została wysłana pomyślnie. Skontaktujemy się z Tobą wkrótce!' });
         e.currentTarget.reset();
       } else {
-        setSubmitStatus({ type: 'error', message: result.error || 'Wystąpił błąd' });
+        setSubmitStatus({ type: 'error', message: result.message || 'Wystąpił błąd podczas wysyłania' });
       }
     } catch (error) {
       setSubmitStatus({ type: 'error', message: 'Wystąpił błąd podczas wysyłania wiadomości' });
