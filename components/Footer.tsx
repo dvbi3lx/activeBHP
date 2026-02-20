@@ -45,14 +45,14 @@ export default function Footer() {
               <span className="material-symbols-outlined text-primary text-xl">mail</span>
               <div>
                 <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Napisz do nas</p>
-                <p className="text-sm font-bold text-white">kontakt@activebhp.pl</p>
+                <p className="text-sm font-bold text-white">activebhp@activebhp.pl</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="material-symbols-outlined text-primary text-xl">phone_in_talk</span>
               <div>
                 <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Zadzwoń</p>
-                <p className="text-sm font-bold text-white">+48 793 228 483</p>
+                <p className="text-sm font-bold text-white">+48 605 150 608</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

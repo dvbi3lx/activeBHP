@@ -123,13 +123,13 @@ export default function ContactPage() {
 const contactInfo = [
   {
     label: "Infolinia",
-    value: "+48 793 228 483",
+    value: "+48 605 150 608",
     icon: "phone_in_talk",
     subtext: "Dostępni: 08:00 - 16:00"
   },
   {
     label: "Zapytania",
-    value: "kontakt@activebhp.pl",
+    value: "activebhp@activebhp.pl",
     icon: "alternate_email",
     subtext: "Szybka odpowiedź: do 2h"
   },

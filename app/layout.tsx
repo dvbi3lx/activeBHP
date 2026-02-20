@@ -70,7 +70,7 @@ export default function RootLayout({
               logo: 'https://activebhp.pl/logo.png',
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+48-793-228-483',
+                telephone: '+48-605-150-608',
                 contactType: 'customer service',
                 areaServed: 'PL',
                 availableLanguage: 'Polish',
