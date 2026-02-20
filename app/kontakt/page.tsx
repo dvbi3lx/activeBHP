@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from 'react';
+import { submitContactForm } from '../actions/contact';
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -14,29 +15,15 @@ export default function ContactPage() {
     setSubmitStatus(null);
 
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name'),
-      phone: formData.get('phone'),
-      email: formData.get('email'),
-      message: formData.get('message'),
-    };
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const result = await submitContactForm(formData);
 
-      const result = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus({ type: 'success', message: result.message });
+      if (result.success) {
+        setSubmitStatus({ type: 'success', message: result.message || 'Wysłano!' });
         e.currentTarget.reset();
       } else {
-        setSubmitStatus({ type: 'error', message: result.error || 'Wystąpił błąd podczas wysyłania' });
+        setSubmitStatus({ type: 'error', message: result.error || 'Wystąpił błąd' });
       }
     } catch (error) {
       setSubmitStatus({ type: 'error', message: 'Wystąpił błąd podczas wysyłania wiadomości' });
