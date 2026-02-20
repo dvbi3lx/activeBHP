@@ -13,11 +13,12 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-background-dark/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <ViewTransitionLink href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-primary flex items-center justify-center rounded group-hover:scale-105 transition-transform">
-              <span className="material-symbols-outlined text-black font-bold">shield</span>
-            </div>
-            <span className="text-2xl font-black tracking-tighter text-white uppercase">Active<span className="text-primary">BHP</span></span>
+          <ViewTransitionLink href="/" className="flex items-center group">
+            <img 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_214912_3dce31c0-e6d1-4d77-880c-8e80bffd2f81.png-oX09J22zdT7zzfnKflsui6Fe9L6FyJ.jpeg" 
+              alt="ActiveBHP Logo" 
+              className="h-12 w-auto group-hover:opacity-90 transition-opacity"
+            />
           </ViewTransitionLink>
 
           <div className="hidden md:flex items-center space-x-8">

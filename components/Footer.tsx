@@ -7,11 +7,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary flex items-center justify-center rounded">
-                <span className="material-symbols-outlined text-black text-sm font-bold">shield</span>
-              </div>
-              <span className="text-xl font-black tracking-tighter text-white uppercase italic">Active<span className="text-primary">BHP</span></span>
+            <div>
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_214912_3dce31c0-e6d1-4d77-880c-8e80bffd2f81.png-oX09J22zdT7zzfnKflsui6Fe9L6FyJ.jpeg" 
+                alt="ActiveBHP Logo" 
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-slate-500 text-sm leading-relaxed font-medium">
               Lider w branży bezpieczeństwa i higieny pracy. Dostarczamy najwyższej jakości rozwiązania dla nowoczesnego przemysłu i biznesu w Polsce.

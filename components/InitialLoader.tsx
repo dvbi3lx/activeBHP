@@ -39,16 +39,12 @@ export default function InitialLoader() {
     <div className="fixed inset-0 z-[10000] bg-background-dark flex items-center justify-center">
       <div className="max-w-3xl w-full px-8 text-center">
         {/* Logo */}
-        <div className="flex items-center justify-center gap-4 mb-12 animate-fade-in">
-          <div className="w-20 h-20 bg-primary flex items-center justify-center rounded-lg shadow-2xl shadow-primary/20">
-            <span className="material-symbols-outlined text-black font-bold text-4xl">shield</span>
-          </div>
-          <div>
-            <h1 className="text-5xl font-black tracking-tighter text-white uppercase">
-              Active<span className="text-primary">BHP</span>
-            </h1>
-            <p className="text-xs uppercase tracking-[0.3em] text-slate-500 mt-1">Premium Safety</p>
-          </div>
+        <div className="flex items-center justify-center mb-12 animate-fade-in">
+          <img 
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_214912_3dce31c0-e6d1-4d77-880c-8e80bffd2f81.png-oX09J22zdT7zzfnKflsui6Fe9L6FyJ.jpeg" 
+            alt="ActiveBHP Logo" 
+            className="h-32 w-auto"
+          />
         </div>
 
         {/* Progress Bar */}
