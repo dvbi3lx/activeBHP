@@ -15,25 +15,27 @@ export default function FireSafetyPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center pt-20 hero-gradient overflow-hidden">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/10 blur-[120px] rounded-full"></div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+          <div
+            className="w-full h-full opacity-40 mix-blend-luminosity bg-cover bg-center"
+            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBin9V8ow3TcgKHo85Xqd9OPNbeFNCc-gAb_OelAACo3i6odl1sKdsiIdkfIsWDoYqVd2waPOq2I-PNQ4E4PFujFxFcpkKOhdHotvvTDEq2vHMree3oBs8aMmVHNlGBZSmsVFvoyJGoFH_HQ0e9yZX6-29nk0cLJ4KMvYRwb_3sqQ-9dW0YXkuIsJuIr-rbiQtbMibWpv3Y_UMdKZW80MlhYl_iodPP_6TDWDOXQzXOcZVnB3kAAJKbaUwXmutj8g2HknCnYn6t7l8j')" }}
+          ></div>
         </div>
-        <div className="max-w-5xl mx-auto px-4 text-center z-10">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-[1px] w-12 bg-primary"></div>
-            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Ochrona Przeciwpożarowa</span>
-            <div className="h-[1px] w-12 bg-primary"></div>
-          </div>
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
-            PPOŻ I <span className="text-primary">PIERWSZA POMOC</span>
-          </h1>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-medium">
-            Zapewniamy pełną zgodność z przepisami przeciwpożarowymi oraz uczymy ratować życie. Profesjonalne wsparcie dla Twojego biznesu.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="#oferta" className="bg-primary text-black px-10 py-5 font-black uppercase tracking-widest flex items-center gap-3 hover:bg-yellow-400 transition-all w-full sm:w-auto justify-center group">
+        <div className="max-w-7xl mx-auto px-6 relative z-20 py-20">
+          <div className="max-w-2xl">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="h-[1px] w-12 bg-primary mt-2"></div>
+              <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Ochrona Przeciwpożarowa</span>
+            </div>
+            <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+              PPOŻ I <span className="text-primary">PIERWSZA POMOC</span>
+            </h1>
+            <p className="text-slate-400 text-lg md:text-xl mb-8 font-medium leading-relaxed">
+              Zapewniamy pełną zgodność z przepisami przeciwpożarowymi oraz uczymy ratować życie. Profesjonalne wsparcie dla Twojego biznesu.
+            </p>
+            <Link href="#oferta" className="inline-flex items-center gap-3 bg-primary text-black px-8 py-4 font-black uppercase tracking-widest hover:bg-yellow-400 transition-all group">
               Poznaj ofertę
               <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
@@ -44,13 +46,21 @@ export default function FireSafetyPage() {
       {/* Audits Section */}
       <section className="py-24 bg-background-dark border-t border-white/5" id="oferta">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-20">
-            <div className="max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Bezpieczeństwo Pożarowe</span>
               <h2 className="text-5xl md:text-7xl font-black uppercase leading-none text-white">
                 Audyty i <br/>
                 <span className="text-outline">Prewencja PPOŻ.</span>
               </h2>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215229_d30b066e-0b9b-4dae-ab37-cec73e15e17a-Photoroom-f8QrrC9OmxNaswb8Or3w8cnIdk8Tl1.png" 
+                alt="Fire Extinguisher - Professional Safety Equipment" 
+                className="w-56 sm:w-64 md:w-72 h-auto object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10">

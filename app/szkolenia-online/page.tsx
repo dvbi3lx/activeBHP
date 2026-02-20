@@ -10,7 +10,7 @@ export default function TrainingOnlinePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-32">
         <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-card-dark to-background-dark">
           <div className="absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-[140px] animate-pulse" style={{ animationDelay: '1s' }}></div>

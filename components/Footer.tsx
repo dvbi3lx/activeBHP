@@ -7,11 +7,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary flex items-center justify-center rounded">
-                <span className="material-symbols-outlined text-black text-sm font-bold">shield</span>
-              </div>
-              <span className="text-xl font-black tracking-tighter text-white uppercase italic">Active<span className="text-primary">BHP</span></span>
+            <div>
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215412_cbb1c9d9-5e26-4a85-a625-8f43d85b5e9a-Photoroom-PMWkQqrELhslRqfSUwwJqZB0efJIp1.png" 
+                alt="ActiveBHP Logo" 
+                className="h-16 w-auto"
+              />
             </div>
             <p className="text-slate-500 text-sm leading-relaxed font-medium">
               Lider w branży bezpieczeństwa i higieny pracy. Dostarczamy najwyższej jakości rozwiązania dla nowoczesnego przemysłu i biznesu w Polsce.
@@ -45,14 +46,22 @@ export default function Footer() {
               <span className="material-symbols-outlined text-primary text-xl">mail</span>
               <div>
                 <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Napisz do nas</p>
-                <p className="text-sm font-bold text-white">kontakt@activebhp.pl</p>
+                <p className="text-sm font-bold text-white">activebhp@activebhp.pl</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="material-symbols-outlined text-primary text-xl">phone_in_talk</span>
               <div>
                 <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Zadzwoń</p>
-                <p className="text-sm font-bold text-white">+48 500 000 000</p>
+                <p className="text-sm font-bold text-white">+48 605 150 608</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="material-symbols-outlined text-primary text-xl">location_on</span>
+              <div>
+                <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Adres</p>
+                <p className="text-sm font-bold text-white">Powstańców Wielkopolskich 12/lok 28</p>
+                <p className="text-xs text-slate-400">91-040 Łódź</p>
               </div>
             </div>
           </div>
@@ -60,7 +69,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
-            © 2024 ACTIVEBHP SOLUTIONS. Wszystkie prawa zastrzeżone.
+            © {new Date().getFullYear()} ACTIVEBHP SOLUTIONS. Wszystkie prawa zastrzeżone.
           </p>
           <div className="flex gap-8">
             <Link className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors" href="/polityka-prywatnosci">Polityka prywatności</Link>

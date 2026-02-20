@@ -19,7 +19,7 @@ export const baseMetadata = {
     siteName: 'ActiveBHP',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary_large_image' as const,
   },
   robots: {
     index: true,
@@ -28,7 +28,7 @@ export const baseMetadata = {
       index: true,
       follow: true,
       'max-video-preview': -1,
-      'max-image-preview': 'large',
+      'max-image-preview': 'large' as const,
       'max-snippet': -1,
     },
   },

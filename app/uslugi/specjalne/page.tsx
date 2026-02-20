@@ -15,11 +15,16 @@ export default function SpecialServicesPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <header className="relative pt-40 pb-24 hero-gradient overflow-hidden border-b border-white/5">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden border-b border-white/5 pt-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+          <div
+            className="w-full h-full opacity-40 mix-blend-luminosity bg-cover bg-center"
+            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBin9V8ow3TcgKHo85Xqd9OPNbeFNCc-gAb_OelAACo3i6odl1sKdsiIdkfIsWDoYqVd2waPOq2I-PNQ4E4PFujFxFcpkKOhdHotvvTDEq2vHMree3oBs8aMmVHNlGBZSmsVFvoyJGoFH_HQ0e9yZX6-29nk0cLJ4KMvYRwb_3sqQ-9dW0YXkuIsJuIr-rbiQtbMibWpv3Y_UMdKZW80MlhYl_iodPP_6TDWDOXQzXOcZVnB3kAAJKbaUwXmutj8g2HknCnYn6t7l8j')" }}
+          ></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative">
+        <div className="max-w-7xl mx-auto px-6 relative z-20 py-20">
+          <div className="max-w-2xl">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-[1px] w-12 bg-primary"></div>
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Innowacje w bezpieczeństwie</span>
@@ -30,8 +35,9 @@ export default function SpecialServicesPage() {
           <p className="text-slate-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed">
             Dostarczamy niszowe rozwiązania z zakresu bezpieczeństwa oraz innowacyjne systemy zarządzania ryzykiem dla najbardziej wymagających gałęzi przemysłu.
           </p>
+          </div>
         </div>
-      </header>
+      </section>
 
       {/* Special Services Grid */}
       <section className="py-24 bg-background-dark">
@@ -56,7 +62,7 @@ export default function SpecialServicesPage() {
       </section>
 
       {/* Underwater Section */}
-      <section className="py-24 relative overflow-hidden bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDl6LPqc_EiKuWHqboVgVnGlk4bdLdxgz2Z-VN8ytPKwq2axrtrXlpGAT7qiVLPbEPOFBOfKICfdbrjOziegTW3hTXB9Sn4Shu3JPzYE6mbTUDBffdHeo6Vg5KavR4IgaPXDjV9omG_7rlvANxhocLO9Y3SsBh1lPXk2RXhfqRniceVd6f4oL0nBkhd-G4c-iTaNZ_UxcmW8s_TG147uOwXnXIE-U4pgTLCkbAom5WmQSrAXRh4qu4ni4c7Ygs6kfTBpBOCSKrY-YHg')" }}>
+      <section className="py-24 relative overflow-hidden bg-card-dark/50 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-16">
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Specjalizacja Głęboka</span>
@@ -67,7 +73,7 @@ export default function SpecialServicesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {underwaterItems.map((item, index) => (
-              <div key={index} className="bg-background-dark/80 backdrop-blur-sm border-l-4 border-primary p-8 hover:bg-background-dark transition-colors">
+              <div key={index} className="bg-card-dark border border-white/10 border-l-4 border-l-primary p-8 hover:border-primary/50 transition-colors">
                 <h4 className="text-primary font-black uppercase text-sm tracking-widest mb-4 leading-tight">{item.title}</h4>
                 <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
               </div>

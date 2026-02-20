@@ -2,6 +2,7 @@
   "name": "active-bhp",
   "version": "0.1.0",
   "private": true,
+  "description": "ActiveBHP - Bezpieczeństwo i Higiena Pracy",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +11,7 @@
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
-    "next": "^15",
+    "next": "15.3.6",
     "react": "^19",
     "react-dom": "^19"
   },

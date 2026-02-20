@@ -28,7 +28,7 @@ export default function Home() {
             <div className="h-[1px] w-12 bg-primary"></div>
           </div>
 
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
             Śpij spokojnie. <br/>
             <span className="text-primary">My zadbamy o BHP.</span>
           </h1>
@@ -60,21 +60,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-24 bg-card-dark/50 border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Zobacz nas w akcji</span>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+              ActiveBHP <span className="text-primary">w praktyce</span>
+            </h2>
+          </div>
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full rounded-lg border-2 border-primary/20 shadow-2xl shadow-primary/10 bg-black"
+              src="https://www.youtube.com/embed/UYbhQTa1M38"
+              title="ActiveBHP - Film promocyjny"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-24 bg-background-dark border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-20">
-            <div className="max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Co zyskujesz</span>
-              <h2 className="text-5xl md:text-7xl font-black uppercase leading-none text-white">
+              <h2 className="text-4xl md:text-6xl font-black uppercase leading-none text-white mb-6">
                 Korzyści dla <br/>
                 <span className="text-outline">Twojej Firmy.</span>
               </h2>
+              <div className="border-l-4 border-primary pl-6 py-2">
+                <p className="text-slate-400 font-medium text-lg">
+                  Oszczędzaj czas i pieniądze dzięki rozwiązaniom szytym na miarę. Unikniesz kar, wypadków i stresujących kontroli – zapewnimy Ci spokój i pewność, że wszystko jest pod kontrolą.
+                </p>
+              </div>
             </div>
-            <div className="lg:max-w-sm border-l-4 border-primary pl-6 py-2">
-              <p className="text-slate-400 font-medium">
-                Oszczędzaj czas i pieniądze dzięki rozwiązaniom szytym na miarę. Unikniesz kar, wypadków i stresujących kontroli – zapewnimy Ci spokój i pewność, że wszystko jest pod kontrolą.
-              </p>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215237_ee740a4a-7682-4494-9d06-976f30e996a0-Photoroom-8rUxkqMi0kQR4rM2T0ivtrVyLA7BAS.png" 
+                alt="Safety Helmet" 
+                className="w-64 sm:w-72 md:w-80 h-auto object-contain"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -103,8 +133,8 @@ export default function Home() {
       {/* Mission Section */}
       <section className="py-32 bg-primary">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-7xl font-black text-black leading-tight mb-8 uppercase tracking-tighter">
-            Zacznij działać <br/> bez stresu.
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-black leading-tight mb-8 uppercase tracking-tighter">
+            Zacznij działać <br className="hidden sm:block"/> bez stresu.
           </h2>
           <p className="text-black/70 text-lg md:text-xl font-bold max-w-2xl mx-auto mb-12 uppercase tracking-wide">
             Otrzymaj darmową konsultację i dowiedz się, jak w 48 godzin możesz mieć całą dokumentację BHP gotową. Bez papierologii, bez stresu – tylko rezultaty.

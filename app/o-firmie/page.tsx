@@ -14,11 +14,15 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-48 pb-32 hero-gradient overflow-hidden">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+          <div
+            className="w-full h-full opacity-40 mix-blend-luminosity bg-cover bg-center"
+            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBin9V8ow3TcgKHo85Xqd9OPNbeFNCc-gAb_OelAACo3i6odl1sKdsiIdkfIsWDoYqVd2waPOq2I-PNQ4E4PFujFxFcpkKOhdHotvvTDEq2vHMree3oBs8aMmVHNlGBZSmsVFvoyJGoFH_HQ0e9yZX6-29nk0cLJ4KMvYRwb_3sqQ-9dW0YXkuIsJuIr-rbiQtbMibWpv3Y_UMdKZW80MlhYl_iodPP_6TDWDOXQzXOcZVnB3kAAJKbaUwXmutj8g2HknCnYn6t7l8j')" }}
+          ></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-20 py-20">
           <div className="max-w-3xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-[2px] w-12 bg-primary"></div>
@@ -62,24 +66,46 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
             <div>
-              <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Eksperci ActiveBHP</span>
-              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white">Nasz <span className="text-outline">Zespół</span></h2>
+              <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Zarząd ActiveBHP</span>
+              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white">Nasz <span className="text-outline">Prezes</span></h2>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="group">
-                <div className="relative overflow-hidden aspect-[3/4] mb-6 border border-white/5">
-                  <img
-                    alt={member.name}
-                    className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                    src={member.image}
-                  />
-                </div>
-                <h3 className="text-2xl font-black uppercase text-white">{member.name}</h3>
-                <p className="text-primary font-bold uppercase text-xs tracking-[0.2em] mt-2">{member.role}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="mb-6">
+                <img
+                  alt="Marek Spiżewski - Prezes ActiveBHP"
+                  className="w-full h-auto"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172552_d5afad11-3d96-42a7-a3c0-91b79ac193cb-Photoroom-kMuZtzSObdETCX85zlGd7A3m3r2jza.png"
+                  loading="lazy"
+                />
               </div>
-            ))}
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-3xl font-black uppercase text-white">Marek Spiżewski</h3>
+                  <p className="text-primary font-bold uppercase text-sm tracking-[0.2em] mt-2">Właściciel i Prezes</p>
+                </div>
+                <a 
+                  href="https://www.linkedin.com/in/marekspizewski/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-primary hover:bg-yellow-400 transition-colors flex items-center justify-center"
+                >
+                  <span className="material-symbols-outlined text-black text-2xl">link</span>
+                </a>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <p className="text-slate-300 leading-relaxed text-lg">
+                Marek Spiżewski to właściciel i prezes firmy Active BHP, działającej z siedzibą w Łodzi jako spółka zajmująca się kompleksową obsługą w zakresie bezpieczeństwa i higieny pracy.
+              </p>
+              <p className="text-slate-300 leading-relaxed">
+                Firma oferuje audyty stanu BHP, kontrole warunków pracy, szkolenia BHP dopasowane do różnych grup zawodowych oraz opracowywanie wymaganej dokumentacji zgodnej z przepisami prawa pracy i BHP. Active BHP wdraża także autorskie narzędzia, takie jak systemy zarządzania jakością i audyty bezpieczeństwa, które wspierają przedsiębiorstwa w poprawie procesów i zgodności z normami.
+              </p>
+              <p className="text-slate-300 leading-relaxed">
+                Dzięki praktycznemu podejściu i doświadczeniu w pracy z różnymi branżami, firma działa na rzecz podnoszenia standardów bezpieczeństwa w zakładach pracy. Właściciel jest rozpoznawalny w środowisku lokalnym jako specjalista zorientowany na praktyczne zastosowanie wiedzy i rozwój edukacji BHP.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -124,24 +150,6 @@ const reasons = [
     title: "Indywidualne podejście",
     icon: "person_check",
     description: "Nie stosujemy gotowych szablonów. Każda firma otrzymuje rozwiązania skrojone pod konkretne ryzyka."
-  }
-];
-
-const team = [
-  {
-    name: "Marek Wiśniewski",
-    role: "Główny Specjalista ds. BHP",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDsCwTEoMzOmDT7EzTvYEDAsYPKhVow5hokbuUmeMYb1QNEUUktH3iFT0VzeHYXu6z3nu3-qUivoDX6Q2soZaILfVwKDuQE_l6-q0qOOZzxOJNhjya-HI1Uc6CMQziLAyV-6FaOMI38d-2NOH9o6YwlMgycTwFpRohivfEkPzo_XTqp_0lW2UdkrNNu2DWIgL5qXbF_VpyAt3mAM0E5c9P-hnPuEkjB9cPBc6f76OlmuUnevu60DIRkt6obDL6Xf72xP8uc6JwZVUnW"
-  },
-  {
-    name: "Anna Kowalska",
-    role: "Audytor PPOŻ i Ewakuacji",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAcOV-N8itdJcUQBMXc7f8L_Uj_WA7NmtAYU9cL3aNgmDLiJD1pkXnhPolG3R5D4ATxsg7R-sf52_BEErsOw7mvnPyx66KGDwDAW386PKtLtB6cfXkLhPWYepo1UdECR6mMOtyp_o8a1y531Qe896RNoq_1QDXgn2vjW1L-siMcsKJy3bjwRpTsiatJ-Shn_Cuf4pP5EXVVSShFP5XL-gaOpVAttLj5leEgqzFsDHUNLr4ChVYUkxqNQcPCOAVzYzxdf7GaHg5cZ6bT"
-  },
-  {
-    name: "Tomasz Nowak",
-    role: "Trener Szkoleń Przemysłowych",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDhZB1mlWPNn4ohlU6kWmJp3raR-gecu5By2E08ppNg1qCWk4z55lG9oo22hLxrRpBCqwNJA-DTZ511u25lVUhGv92zsAfHTI2GQF8VSyYtbeLiNY5IIhmiZXmc8aze8ylPUuSyMvV_26ZyTdIfZ08BqKe_l10CIQLpco6Jmg5KbVxXLrwZG-IJvqDqPnwOkjY1PSkKkXEc4yGzqatTJu4T5nYOHXFIBHAjEyC3D4xLATzMrcPlWb1-wsrT6u0DWs_PSpDMSetfura9"
   }
 ];
 
