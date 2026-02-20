@@ -76,6 +76,7 @@ export default function Home() {
               title="ActiveBHP - Film promocyjny"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
             ></iframe>
           </div>
         </div>
@@ -101,7 +102,8 @@ export default function Home() {
               <img 
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215237_ee740a4a-7682-4494-9d06-976f30e996a0-Photoroom-8rUxkqMi0kQR4rM2T0ivtrVyLA7BAS.png" 
                 alt="Safety Helmet" 
-                className="w-80 h-auto object-contain"
+                className="w-64 sm:w-72 md:w-80 h-auto object-contain"
+                loading="lazy"
               />
             </div>
           </div>

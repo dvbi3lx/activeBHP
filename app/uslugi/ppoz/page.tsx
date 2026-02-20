@@ -58,7 +58,8 @@ export default function FireSafetyPage() {
               <img 
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215229_d30b066e-0b9b-4dae-ab37-cec73e15e17a-Photoroom-f8QrrC9OmxNaswb8Or3w8cnIdk8Tl1.png" 
                 alt="Fire Extinguisher - Professional Safety Equipment" 
-                className="w-72 h-auto object-contain"
+                className="w-56 sm:w-64 md:w-72 h-auto object-contain"
+                loading="lazy"
               />
             </div>
           </div>

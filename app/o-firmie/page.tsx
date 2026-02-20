@@ -77,6 +77,7 @@ export default function AboutPage() {
                   alt="Marek Spiżewski - Prezes ActiveBHP"
                   className="w-full h-auto"
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172552_d5afad11-3d96-42a7-a3c0-91b79ac193cb-Photoroom-kMuZtzSObdETCX85zlGd7A3m3r2jza.png"
+                  loading="lazy"
                 />
               </div>
               <div className="flex items-center justify-between">
