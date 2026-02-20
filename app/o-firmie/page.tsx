@@ -71,11 +71,11 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="group">
-              <div className="relative overflow-hidden aspect-square mb-6 border-2 border-primary/20">
+            <div>
+              <div className="mb-6">
                 <img
                   alt="Marek Spiżewski - Prezes ActiveBHP"
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                  className="w-full h-auto"
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172552_d5afad11-3d96-42a7-a3c0-91b79ac193cb-Photoroom-kMuZtzSObdETCX85zlGd7A3m3r2jza.png"
                 />
               </div>
