@@ -76,7 +76,7 @@ export default function AboutPage() {
                 <img
                   alt="Marek Spiżewski - Prezes ActiveBHP"
                   className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1176518056524ab791d58ce-AKMq2sF8F3u2HeFh6mQfcHHAAjivRd.jpg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172552_d5afad11-3d96-42a7-a3c0-91b79ac193cb-Photoroom-kMuZtzSObdETCX85zlGd7A3m3r2jza.png"
                 />
               </div>
               <div className="flex items-center justify-between">
