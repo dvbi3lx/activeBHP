@@ -44,15 +44,8 @@ export default function FireSafetyPage() {
       </section>
 
       {/* Audits Section */}
-      <section className="py-24 bg-background-dark border-t border-white/5 relative overflow-hidden" id="oferta">
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-96 opacity-10 pointer-events-none hidden xl:block">
-          <img 
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215229_d30b066e-0b9b-4dae-ab37-cec73e15e17a-Photoroom-f8QrrC9OmxNaswb8Or3w8cnIdk8Tl1.png" 
-            alt="Fire Extinguisher" 
-            className="w-full h-full object-contain"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 bg-background-dark border-t border-white/5" id="oferta">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Bezpieczeństwo Pożarowe</span>
@@ -62,14 +55,11 @@ export default function FireSafetyPage() {
               </h2>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-primary/20 blur-2xl group-hover:bg-primary/30 transition-all duration-500"></div>
-                <img 
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215229_d30b066e-0b9b-4dae-ab37-cec73e15e17a-Photoroom-f8QrrC9OmxNaswb8Or3w8cnIdk8Tl1.png" 
-                  alt="Fire Extinguisher - Professional Safety Equipment" 
-                  className="w-72 h-auto object-contain relative z-10 group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215229_d30b066e-0b9b-4dae-ab37-cec73e15e17a-Photoroom-f8QrrC9OmxNaswb8Or3w8cnIdk8Tl1.png" 
+                alt="Fire Extinguisher - Professional Safety Equipment" 
+                className="w-72 h-auto object-contain"
+              />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10">
