@@ -37,7 +37,6 @@ export default function AllServicesPage() {
               Zyskaj spokój ducha dzięki naszym rozwiązaniom. Każda usługa została zaprojektowana, aby nie tylko spełnić wymogi prawne, ale przede wszystkim chronić to, co najważniejsze – Twój zespół i ciągłość Twojego biznesu.
             </p>
           </div>
-          </div>
         </div>
       </section>
 
