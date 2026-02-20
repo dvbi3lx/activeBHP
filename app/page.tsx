@@ -28,7 +28,7 @@ export default function Home() {
             <div className="h-[1px] w-12 bg-primary"></div>
           </div>
 
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
             Śpij spokojnie. <br/>
             <span className="text-primary">My zadbamy o BHP.</span>
           </h1>
@@ -69,9 +69,9 @@ export default function Home() {
               ActiveBHP <span className="text-primary">w praktyce</span>
             </h2>
           </div>
-          <div className="relative aspect-video bg-black rounded-lg overflow-hidden border-2 border-primary/20 shadow-2xl shadow-primary/10">
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
             <iframe
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 w-full h-full rounded-lg border-2 border-primary/20 shadow-2xl shadow-primary/10 bg-black"
               src="https://www.youtube.com/embed/UYbhQTa1M38"
               title="ActiveBHP - Film promocyjny"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -124,8 +124,8 @@ export default function Home() {
       {/* Mission Section */}
       <section className="py-32 bg-primary">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-7xl font-black text-black leading-tight mb-8 uppercase tracking-tighter">
-            Zacznij działać <br/> bez stresu.
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-black leading-tight mb-8 uppercase tracking-tighter">
+            Zacznij działać <br className="hidden sm:block"/> bez stresu.
           </h2>
           <p className="text-black/70 text-lg md:text-xl font-bold max-w-2xl mx-auto mb-12 uppercase tracking-wide">
             Otrzymaj darmową konsultację i dowiedz się, jak w 48 godzin możesz mieć całą dokumentację BHP gotową. Bez papierologii, bez stresu – tylko rezultaty.

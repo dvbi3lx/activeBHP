@@ -14,11 +14,11 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Header Section */}
-      <header className="pt-40 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="flex items-start gap-6">
-          <div className="w-2 h-20 bg-primary shrink-0"></div>
+      <header className="pt-32 pb-12 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="flex items-start gap-4 sm:gap-6">
+          <div className="w-1 sm:w-2 h-16 sm:h-20 bg-primary shrink-0"></div>
           <div>
-            <h1 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter leading-none mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black italic uppercase tracking-tighter leading-none mb-4 sm:mb-6">
               Kontakt i Lokalizacja
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl leading-relaxed font-medium">
@@ -29,19 +29,19 @@ export default function ContactPage() {
       </header>
 
       {/* Main Content */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         {/* Contact Info Cards */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="lg:col-span-5 space-y-4 sm:space-y-6">
           {contactInfo.map((info, index) => (
-            <div key={index} className="bg-card-dark p-8 border border-white/5 hover:border-primary/50 transition-colors group">
-              <div className="flex items-start gap-6">
-                <div className="bg-primary p-3 rounded text-black group-hover:scale-110 transition-transform">
-                  <span className="material-icons">{info.icon}</span>
+            <div key={index} className="bg-card-dark p-6 sm:p-8 border border-white/5 hover:border-primary/50 transition-colors group">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="bg-primary p-2.5 sm:p-3 rounded text-black group-hover:scale-110 transition-transform shrink-0">
+                  <span className="material-icons text-xl sm:text-2xl">{info.icon}</span>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs font-bold uppercase tracking-widest text-gray-600 mb-1">{info.label}</p>
-                  <p className="text-2xl font-black italic">{info.value}</p>
-                  <p className="text-sm text-gray-500 mt-2 uppercase font-semibold">{info.subtext}</p>
+                  <p className="text-lg sm:text-2xl font-black italic break-words">{info.value}</p>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-2 uppercase font-semibold">{info.subtext}</p>
                 </div>
               </div>
             </div>
@@ -60,8 +60,8 @@ export default function ContactPage() {
 
         {/* Contact Form */}
         <div className="lg:col-span-7">
-          <div className="bg-card-dark p-10 md:p-12 border border-white/10">
-            <h3 className="text-3xl font-black italic uppercase mb-10 tracking-tighter">Formularz Kontaktowy</h3>
+          <div className="bg-card-dark p-6 sm:p-8 md:p-12 border border-white/10">
+            <h3 className="text-2xl sm:text-3xl font-black italic uppercase mb-6 sm:mb-10 tracking-tighter">Formularz Kontaktowy</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
