@@ -41,7 +41,7 @@ export default function InitialLoader() {
         {/* Logo */}
         <div className="flex items-center justify-center mb-12 animate-fade-in">
           <img 
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215412_cbb1c9d9-5e26-4a85-a625-8f43d85b5e9a-MkFTv4PSzPqNpZ0bwRf6gKuTgDiteQ.jpeg" 
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215412_cbb1c9d9-5e26-4a85-a625-8f43d85b5e9a-Photoroom-PMWkQqrELhslRqfSUwwJqZB0efJIp1.png" 
             alt="ActiveBHP Logo" 
             className="h-32 w-auto"
           />
