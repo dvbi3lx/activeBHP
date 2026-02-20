@@ -2,11 +2,12 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error', message: string} | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,7 +48,7 @@ ${message}
 
       if (result.success) {
         setSubmitStatus({ type: 'success', message: 'Wiadomość została wysłana pomyślnie. Skontaktujemy się z Tobą wkrótce!' });
-        e.currentTarget.reset();
+        formRef.current?.reset();
       } else {
         setSubmitStatus({ type: 'error', message: result.message || 'Wystąpił błąd podczas wysyłania' });
       }
@@ -56,7 +57,7 @@ ${message}
       // In Web3Forms, this usually means the email was sent successfully
       console.log('[v0] Fetch error (likely CORS):', error);
       setSubmitStatus({ type: 'success', message: 'Wiadomość została wysłana pomyślnie. Skontaktujemy się z Tobą wkrótce!' });
-      e.currentTarget.reset();
+      formRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -124,7 +125,7 @@ ${message}
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Imię i Nazwisko</label>
