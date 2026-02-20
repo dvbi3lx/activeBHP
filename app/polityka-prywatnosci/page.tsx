@@ -28,8 +28,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-black uppercase text-primary mb-4">1. Administrator danych</h2>
             <p className="text-slate-300 leading-relaxed">
               Administratorem Twoich danych osobowych jest ActiveBHP z siedzibą w Łodzi (91-040), 
-              ul. Powstańców Wielkopolskich 12/lok 28. Możesz skontaktować się z nami pod adresem e-mail: kontakt@activebhp.pl 
-              lub telefonicznie: +48 793 228 483.
+              ul. Powstańców Wielkopolskich 12/lok 28. Możesz skontaktować się z nami pod adresem e-mail: activebhp@activebhp.pl 
+              lub telefonicznie: +48 605 150 608.
             </p>
           </section>
 
@@ -128,8 +128,8 @@ export default function PrivacyPolicyPage() {
               W przypadku pytań dotyczących ochrony danych osobowych, skontaktuj się z nami:
             </p>
             <ul className="list-none text-slate-300 space-y-2 mt-4">
-              <li><strong className="text-primary">E-mail:</strong> kontakt@activebhp.pl</li>
-              <li><strong className="text-primary">Telefon:</strong> +48 793 228 483</li>
+              <li><strong className="text-primary">E-mail:</strong> activebhp@activebhp.pl</li>
+              <li><strong className="text-primary">Telefon:</strong> +48 605 150 608</li>
               <li><strong className="text-primary">Adres:</strong> Powstańców Wielkopolskich 12/lok 28, 91-040 Łódź</li>
             </ul>
           </section>

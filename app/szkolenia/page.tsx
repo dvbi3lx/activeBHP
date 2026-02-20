@@ -10,13 +10,17 @@ export default function TrainingPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-background-dark via-card-dark to-background-dark overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-primary rounded-full blur-[100px]"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/50 rounded-full blur-[120px]"></div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+          <div
+            className="w-full h-full opacity-40 mix-blend-luminosity bg-cover bg-center"
+            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBin9V8ow3TcgKHo85Xqd9OPNbeFNCc-gAb_OelAACo3i6odl1sKdsiIdkfIsWDoYqVd2waPOq2I-PNQ4E4PFujFxFcpkKOhdHotvvTDEq2vHMree3oBs8aMmVHNlGBZSmsVFvoyJGoFH_HQ0e9yZX6-29nk0cLJ4KMvYRwb_3sqQ-9dW0YXkuIsJuIr-rbiQtbMibWpv3Y_UMdKZW80MlhYl_iodPP_6TDWDOXQzXOcZVnB3kAAJKbaUwXmutj8g2HknCnYn6t7l8j')" }}
+          ></div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 text-center z-10 pt-20">
+        <div className="max-w-7xl mx-auto px-6 relative z-20 py-20">
+          <div className="max-w-2xl">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-[1px] w-12 bg-primary"></div>
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Profesjonalne Szkolenia</span>
@@ -38,6 +42,7 @@ export default function TrainingPage() {
             <Link href="/szkolenia-online" className="border-2 border-primary text-primary px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-primary hover:text-black transition-all">
               Platforma Online
             </Link>
+          </div>
           </div>
         </div>
       </section>

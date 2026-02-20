@@ -70,8 +70,8 @@ export default function TermsPage() {
               <li>Klient składa zamówienie poprzez:
                 <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
                   <li>Formularz kontaktowy na stronie internetowej</li>
-                  <li>E-mail: kontakt@activebhp.pl</li>
-                  <li>Telefon: +48 793 228 483</li>
+                  <li>E-mail: activebhp@activebhp.pl</li>
+                  <li>Telefon: +48 605 150 608</li>
                 </ul>
               </li>
               <li>Potwierdzenie przyjęcia zamówienia następuje w formie elektronicznej lub pisemnej.</li>
@@ -143,7 +143,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-black uppercase text-primary mb-4">§9. Reklamacje</h2>
             <ol className="list-decimal list-inside text-slate-300 space-y-3">
               <li>Klient ma prawo zgłosić reklamację w przypadku nieprawidłowego wykonania usługi.</li>
-              <li>Reklamację należy zgłosić na adres: kontakt@activebhp.pl w terminie 14 dni od wykonania usługi.</li>
+              <li>Reklamację należy zgłosić na adres: activebhp@activebhp.pl w terminie 14 dni od wykonania usługi.</li>
               <li>Reklamacja powinna zawierać opis problemu oraz oczekiwania Klienta.</li>
               <li>Usługodawca rozpatruje reklamację w ciągu 14 dni roboczych od jej otrzymania.</li>
               <li>Odpowiedź na reklamację jest przesyłana na adres e-mail podany przez Klienta.</li>
@@ -177,8 +177,8 @@ export default function TermsPage() {
               <li><strong className="text-primary">ActiveBHP</strong></li>
               <li>ul. Powstańców Wielkopolskich 12/lok 28</li>
               <li>91-040 Łódź</li>
-              <li><strong className="text-primary">E-mail:</strong> kontakt@activebhp.pl</li>
-              <li><strong className="text-primary">Telefon:</strong> +48 793 228 483</li>
+              <li><strong className="text-primary">E-mail:</strong> activebhp@activebhp.pl</li>
+              <li><strong className="text-primary">Telefon:</strong> +48 605 150 608</li>
             </ul>
           </section>
         </div>
