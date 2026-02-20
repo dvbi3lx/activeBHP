@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div>
               <img 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_214912_3dce31c0-e6d1-4d77-880c-8e80bffd2f81.png-oX09J22zdT7zzfnKflsui6Fe9L6FyJ.jpeg" 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215412_cbb1c9d9-5e26-4a85-a625-8f43d85b5e9a-MkFTv4PSzPqNpZ0bwRf6gKuTgDiteQ.jpeg" 
                 alt="ActiveBHP Logo" 
                 className="h-16 w-auto"
               />
