@@ -2,11 +2,47 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useState } from 'react';
 
 export default function ContactPage() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error', message: string} | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Wiadomość została wysłana! Skontaktujemy się z Tobą wkrótce.');
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      phone: formData.get('phone'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: result.message });
+        e.currentTarget.reset();
+      } else {
+        setSubmitStatus({ type: 'error', message: result.error || 'Wystąpił błąd podczas wysyłania' });
+      }
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: 'Wystąpił błąd podczas wysyłania wiadomości' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -62,24 +98,33 @@ export default function ContactPage() {
         <div className="lg:col-span-7">
           <div className="bg-card-dark p-6 sm:p-8 md:p-12 border border-white/10">
             <h3 className="text-2xl sm:text-3xl font-black italic uppercase mb-6 sm:mb-10 tracking-tighter">Formularz Kontaktowy</h3>
+            
+            {submitStatus && (
+              <div className={`p-4 border-l-4 ${submitStatus.type === 'success' ? 'bg-green-500/10 border-green-500' : 'bg-red-500/10 border-red-500'} mb-6`}>
+                <p className={`text-sm font-semibold ${submitStatus.type === 'success' ? 'text-green-500' : 'text-red-500'}`}>
+                  {submitStatus.message}
+                </p>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Imię i Nazwisko</label>
-                  <input required className="w-full bg-background-dark border-border-dark px-4 py-4 text-sm font-semibold focus:border-primary text-white" placeholder="WPISZ DANE" type="text"/>
+                  <input name="name" required className="w-full bg-background-dark border-border-dark px-4 py-4 text-sm font-semibold focus:border-primary text-white" placeholder="WPISZ DANE" type="text"/>
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Telefon</label>
-                  <input required className="w-full bg-background-dark border-border-dark px-4 py-4 text-sm font-semibold text-white" placeholder="+48 --- --- ---" type="tel"/>
+                  <input name="phone" required className="w-full bg-background-dark border-border-dark px-4 py-4 text-sm font-semibold text-white" placeholder="+48 --- --- ---" type="tel"/>
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Adres E-mail</label>
-                <input required className="w-full bg-background-dark border-border-dark px-4 py-4 text-sm font-semibold text-white" placeholder="EMAIL@ADRES.PL" type="email"/>
+                <input name="email" required className="w-full bg-background-dark border-border-dark px-4 py-4 text-sm font-semibold text-white" placeholder="EMAIL@ADRES.PL" type="email"/>
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Twoja wiadomość</label>
-                <textarea required className="w-full bg-background-dark border-border-dark px-4 py-4 text-sm font-semibold text-white" placeholder="TREŚĆ ZAPYTANIA..." rows={4}></textarea>
+                <textarea name="message" required className="w-full bg-background-dark border-border-dark px-4 py-4 text-sm font-semibold text-white" placeholder="TREŚĆ ZAPYTANIA..." rows={4}></textarea>
               </div>
               <div className="flex items-start gap-4">
                 <input required className="mt-1 rounded border-gray-300 text-primary focus:ring-primary bg-background-dark" id="consent" type="checkbox"/>
@@ -87,9 +132,13 @@ export default function ContactPage() {
                   Akceptuję politykę prywatności oraz przetwarzanie moich danych w celu realizacji zapytania przez ActiveBHP.
                 </label>
               </div>
-              <button className="w-full bg-primary hover:bg-yellow-400 text-black font-black uppercase tracking-widest py-5 flex items-center justify-center gap-3 transition-all" type="submit">
-                Wyślij zapytanie
-                <span className="material-icons">arrow_forward</span>
+              <button 
+                className="w-full bg-primary hover:bg-yellow-400 text-black font-black uppercase tracking-widest py-5 flex items-center justify-center gap-3 transition-all disabled:opacity-50 disabled:cursor-not-allowed" 
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Wysyłanie...' : 'Wyślij zapytanie'}
+                <span className="material-icons">{isSubmitting ? 'hourglass_empty' : 'arrow_forward'}</span>
               </button>
             </form>
           </div>
