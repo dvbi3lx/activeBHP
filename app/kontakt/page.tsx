@@ -97,22 +97,36 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="h-[600px] relative overflow-hidden flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-700 bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=2000')" }}>
-        <div className="relative z-10 flex flex-col items-center">
-          <div className="relative mb-4">
-            <div className="absolute -inset-4 bg-primary/20 animate-ping rounded-full"></div>
-            <div className="w-16 h-16 bg-primary flex items-center justify-center transform rotate-45 rounded-sm shadow-2xl relative z-10">
-              <span className="material-icons text-black text-4xl -rotate-45">location_on</span>
-            </div>
-          </div>
-          <div className="bg-black/90 backdrop-blur-md border-2 border-primary p-6 text-center min-w-[300px]">
-            <h4 className="text-primary font-black uppercase text-lg mb-2 italic">ActiveBHP HQ</h4>
+      <section className="relative overflow-hidden border-t border-white/10">
+        <div className="w-full h-[500px] md:h-[600px] grayscale hover:grayscale-0 transition-all duration-700">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2471.8857845671547!2d19.443720776927456!3d51.76935297185033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a34f636c5a3a1%3A0x7e92e60aa4a5f8d8!2sPowsta%C5%84c%C3%B3w%20Wielkopolskich%2012%2C%2091-040%20%C5%81%C3%B3d%C5%BA!5e0!3m2!1spl!2spl!4v1704897234567!5m2!1spl!2spl"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="ActiveBHP - Lokalizacja"
+          ></iframe>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+          <div className="bg-black/95 backdrop-blur-md border-2 border-primary p-6 text-center min-w-[280px] sm:min-w-[320px] pointer-events-auto">
+            <h4 className="text-primary font-black uppercase text-lg mb-2 italic">ActiveBHP Łódź</h4>
             <div className="w-8 h-[1px] bg-primary/50 mx-auto mb-4"></div>
-            <p className="text-white text-xs font-bold uppercase tracking-widest mb-1">ul. Przemysłowa 44</p>
-            <p className="text-gray-400 text-xs font-bold uppercase tracking-widest">61-579 Poznań</p>
+            <p className="text-white text-xs font-bold uppercase tracking-widest mb-1">Powstańców Wielkopolskich 12/lok 28</p>
+            <p className="text-gray-400 text-xs font-bold uppercase tracking-widest">91-040 Łódź</p>
+            <a 
+              href="https://www.google.com/maps/dir//Powsta%C5%84c%C3%B3w+Wielkopolskich+12,+91-040+%C5%81%C3%B3d%C5%BA/@51.76935297185033,19.443720776927456,16z" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-primary hover:text-yellow-400 transition-colors text-xs font-bold uppercase tracking-widest"
+            >
+              <span className="material-icons text-sm">directions</span>
+              Nawiguj
+            </a>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-background-dark/50 pointer-events-none"></div>
       </section>
 
       <Footer />

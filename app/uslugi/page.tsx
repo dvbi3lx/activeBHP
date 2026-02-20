@@ -48,8 +48,8 @@ export default function AllServicesPage() {
           <div>
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-4">
-                <span className="material-symbols-outlined text-primary text-5xl">engineering</span>
-                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">Bezpieczeństwo <span className="text-primary">BHP</span></h2>
+                <span className="material-symbols-outlined text-primary text-5xl shrink-0">engineering</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter">Bezpieczeństwo <span className="text-primary">BHP</span></h2>
               </div>
               <p className="text-slate-400 text-lg font-medium max-w-3xl">
                 Przestań martwić się kontrolami PIP i dokumentacją BHP. Zapewnimy Ci pełną zgodność z przepisami, abyś mógł skupić się na rozwoju firmy.
@@ -66,8 +66,8 @@ export default function AllServicesPage() {
           <div>
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-4">
-                <span className="material-symbols-outlined text-primary text-5xl">fire_extinguisher</span>
-                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">Ochrona <span className="text-primary">PPOŻ</span></h2>
+                <span className="material-symbols-outlined text-primary text-5xl shrink-0">fire_extinguisher</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter">Ochrona <span className="text-primary">PPOŻ</span></h2>
               </div>
               <p className="text-slate-400 text-lg font-medium max-w-3xl">
                 Śpij spokojnie wiedząc, że Twoja firma jest chroniona przed zagrożeniem pożarowym. Kompleksowe rozwiązania zapewniające bezpieczeństwo Twojego zespołu i majątku.
@@ -84,8 +84,8 @@ export default function AllServicesPage() {
           <div>
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-4">
-                <span className="material-symbols-outlined text-primary text-5xl">description</span>
-                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">Dokumentacja <span className="text-primary">i Prawo</span></h2>
+                <span className="material-symbols-outlined text-primary text-5xl shrink-0">description</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter">Dokumentacja <span className="text-primary">i Prawo</span></h2>
               </div>
               <p className="text-slate-400 text-lg font-medium max-w-3xl">
                 Uwolnij się od biurokratycznych obowiązków. Przygotujemy za Ciebie wszystkie wymagane dokumenty, oszczędzając Twój czas i chroniąc przed karami.
@@ -102,8 +102,8 @@ export default function AllServicesPage() {
           <div>
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-4">
-                <span className="material-symbols-outlined text-primary text-5xl">speed</span>
-                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">Pomiary <span className="text-primary">i UDT</span></h2>
+                <span className="material-symbols-outlined text-primary text-5xl shrink-0">speed</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter">Pomiary <span className="text-primary">i UDT</span></h2>
               </div>
               <p className="text-slate-400 text-lg font-medium max-w-3xl">
                 Uniknij awarii i kosztownych przestojów dzięki regularnym pomiarom i przeglądom. Zapewnimy sprawność Twojego sprzętu i zdrowie pracowników.
@@ -120,8 +120,8 @@ export default function AllServicesPage() {
           <div>
             <div className="mb-16">
               <div className="flex items-center gap-4 mb-4">
-                <span className="material-symbols-outlined text-primary text-5xl">workspace_premium</span>
-                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">Usługi <span className="text-primary">Specjalne</span></h2>
+                <span className="material-symbols-outlined text-primary text-5xl shrink-0">workspace_premium</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter">Usługi <span className="text-primary">Specjalne</span></h2>
               </div>
               <p className="text-slate-400 text-lg font-medium max-w-3xl">
                 Wyróżnij swoją firmę na tle konkurencji dzięki certyfikacjom i międzynarodowym standardom. Zwiększ wiarygodność i otwórz nowe możliwości biznesowe.
