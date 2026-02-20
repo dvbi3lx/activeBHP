@@ -7,8 +7,10 @@ export default function InitialLoader() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    console.log('[v0] InitialLoader mounted');
     // Check if user has already seen the loader in this session
     const hasSeenLoader = sessionStorage.getItem('activebhp_loader_seen');
+    console.log('[v0] Has seen loader:', hasSeenLoader);
     
     if (hasSeenLoader) {
       setIsLoading(false);
