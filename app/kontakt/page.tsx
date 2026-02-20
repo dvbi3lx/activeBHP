@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from 'react';
-import { submitContactForm } from '../actions/contact';
+import { submitContactForm } from '../actions';
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
