@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 
+export const runtime = 'nodejs';
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -71,9 +73,10 @@ ${message}
     }
 
   } catch (error) {
-    console.error('[v0] Contact form error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('[v0] Contact form error:', errorMessage, error);
     return NextResponse.json(
-      { error: 'Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.' },
+      { error: `Wystąpił błąd: ${errorMessage}` },
       { status: 500 }
     );
   }
