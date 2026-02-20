@@ -18,10 +18,11 @@ export default function BhpServicesPage() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden border-b border-white/5 pt-20">
         <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
         <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
-          <div
-            className="w-full h-full opacity-40 mix-blend-luminosity bg-cover bg-center"
-            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBin9V8ow3TcgKHo85Xqd9OPNbeFNCc-gAb_OelAACo3i6odl1sKdsiIdkfIsWDoYqVd2waPOq2I-PNQ4E4PFujFxFcpkKOhdHotvvTDEq2vHMree3oBs8aMmVHNlGBZSmsVFvoyJGoFH_HQ0e9yZX6-29nk0cLJ4KMvYRwb_3sqQ-9dW0YXkuIsJuIr-rbiQtbMibWpv3Y_UMdKZW80MlhYl_iodPP_6TDWDOXQzXOcZVnB3kAAJKbaUwXmutj8g2HknCnYn6t7l8j')" }}
-          ></div>
+          <img 
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215310_ea0511b4-0789-4f50-b6b5-c53bc74d4f8f-Photoroom-643Hu9YC3QK60XmMyijNs07qRYyMFB.png" 
+            alt="Work Gloves" 
+            className="w-full h-full object-contain opacity-30"
+          />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-20 py-20">
           <div className="max-w-2xl">

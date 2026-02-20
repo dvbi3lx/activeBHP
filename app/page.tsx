@@ -82,8 +82,15 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-background-dark border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-background-dark border-t border-white/5 relative overflow-hidden">
+        <div className="absolute right-0 top-20 w-64 h-64 opacity-5 pointer-events-none hidden lg:block">
+          <img 
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215237_ee740a4a-7682-4494-9d06-976f30e996a0-Photoroom-8rUxkqMi0kQR4rM2T0ivtrVyLA7BAS.png" 
+            alt="Safety Helmet" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-20">
             <div className="max-w-3xl">
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Co zyskujesz</span>
