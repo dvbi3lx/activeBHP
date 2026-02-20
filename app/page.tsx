@@ -82,27 +82,27 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-background-dark border-t border-white/5 relative overflow-hidden">
-        <div className="absolute right-0 top-20 w-64 h-64 opacity-5 pointer-events-none hidden lg:block">
-          <img 
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215237_ee740a4a-7682-4494-9d06-976f30e996a0-Photoroom-8rUxkqMi0kQR4rM2T0ivtrVyLA7BAS.png" 
-            alt="Safety Helmet" 
-            className="w-full h-full object-contain"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-20">
-            <div className="max-w-3xl">
+      <section className="py-24 bg-background-dark border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Co zyskujesz</span>
-              <h2 className="text-5xl md:text-7xl font-black uppercase leading-none text-white">
+              <h2 className="text-4xl md:text-6xl font-black uppercase leading-none text-white mb-6">
                 Korzyści dla <br/>
                 <span className="text-outline">Twojej Firmy.</span>
               </h2>
+              <div className="border-l-4 border-primary pl-6 py-2">
+                <p className="text-slate-400 font-medium text-lg">
+                  Oszczędzaj czas i pieniądze dzięki rozwiązaniom szytym na miarę. Unikniesz kar, wypadków i stresujących kontroli – zapewnimy Ci spokój i pewność, że wszystko jest pod kontrolą.
+                </p>
+              </div>
             </div>
-            <div className="lg:max-w-sm border-l-4 border-primary pl-6 py-2">
-              <p className="text-slate-400 font-medium">
-                Oszczędzaj czas i pieniądze dzięki rozwiązaniom szytym na miarę. Unikniesz kar, wypadków i stresujących kontroli – zapewnimy Ci spokój i pewność, że wszystko jest pod kontrolą.
-              </p>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215237_ee740a4a-7682-4494-9d06-976f30e996a0-Photoroom-8rUxkqMi0kQR4rM2T0ivtrVyLA7BAS.png" 
+                alt="Safety Helmet" 
+                className="w-80 h-auto object-contain"
+              />
             </div>
           </div>
 

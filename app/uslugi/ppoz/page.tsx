@@ -15,34 +15,32 @@ export default function FireSafetyPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
-        <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
-          <img 
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215229_d30b066e-0b9b-4dae-ab37-cec73e15e17a-Photoroom-f8QrrC9OmxNaswb8Or3w8cnIdk8Tl1.png" 
-            alt="Fire Extinguisher" 
-            className="w-full h-full object-contain opacity-30"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-20 py-20">
-          <div className="max-w-2xl">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-[1px] w-12 bg-primary"></div>
-            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Ochrona Przeciwpożarowa</span>
-            <div className="h-[1px] w-12 bg-primary"></div>
-          </div>
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
-            PPOŻ I <span className="text-primary">PIERWSZA POMOC</span>
-          </h1>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-medium">
-            Zapewniamy pełną zgodność z przepisami przeciwpożarowymi oraz uczymy ratować życie. Profesjonalne wsparcie dla Twojego biznesu.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="#oferta" className="bg-primary text-black px-10 py-5 font-black uppercase tracking-widest flex items-center gap-3 hover:bg-yellow-400 transition-all w-full sm:w-auto justify-center group">
-              Poznaj ofertę
-              <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </Link>
-          </div>
+      <section className="py-32 bg-background-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-start gap-4 mb-6">
+                <div className="h-[1px] w-12 bg-primary mt-2"></div>
+                <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Ochrona Przeciwpożarowa</span>
+              </div>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+                PPOŻ I <span className="text-primary">PIERWSZA POMOC</span>
+              </h1>
+              <p className="text-slate-400 text-lg md:text-xl mb-8 font-medium leading-relaxed">
+                Zapewniamy pełną zgodność z przepisami przeciwpożarowymi oraz uczymy ratować życie. Profesjonalne wsparcie dla Twojego biznesu.
+              </p>
+              <Link href="#oferta" className="inline-flex items-center gap-3 bg-primary text-black px-8 py-4 font-black uppercase tracking-widest hover:bg-yellow-400 transition-all group">
+                Poznaj ofertę
+                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </Link>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215229_d30b066e-0b9b-4dae-ab37-cec73e15e17a-Photoroom-f8QrrC9OmxNaswb8Or3w8cnIdk8Tl1.png" 
+                alt="Fire Extinguisher - Safety Equipment" 
+                className="w-80 h-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
