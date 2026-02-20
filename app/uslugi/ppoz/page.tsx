@@ -15,7 +15,7 @@ export default function FireSafetyPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
         <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
           <div
