@@ -16,12 +16,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/70 to-background-dark/50 z-10"></div>
-        <div className="absolute left-0 top-0 w-1/2 h-full hidden lg:block opacity-15 mix-blend-overlay">
+        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/95 to-background-dark z-10"></div>
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-full hidden lg:flex items-center justify-end pr-12 z-0">
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172457_3ccad666-5424-4dc8-9dae-0f439649625c%20%281%29-Photoroom-mtXIpkdSkohJb25cY2ymjNHpdC7NCa.png"
             alt="Prezes ActiveBHP"
-            className="w-full h-full object-contain"
+            className="w-96 h-auto object-contain opacity-40 drop-shadow-2xl"
             loading="lazy"
           />
         </div>
