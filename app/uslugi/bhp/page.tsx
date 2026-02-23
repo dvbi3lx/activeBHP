@@ -15,7 +15,7 @@ export default function BhpServicesPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden border-b border-white/5 pt-20">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden border-b border-white/5 pt-20 animate-fade-in">
         <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
         <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
           <div
@@ -25,14 +25,14 @@ export default function BhpServicesPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-20 py-20">
           <div className="max-w-2xl">
-            <div className="flex items-start gap-4 mb-6">
+            <div className="flex items-start gap-4 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="h-[1px] w-12 bg-primary mt-2"></div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Profesjonalne Rozwiązania</span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+            <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
               USŁUGI <span className="text-primary">BHP</span>
             </h1>
-            <p className="text-slate-400 text-lg md:text-xl font-medium leading-relaxed">
+            <p className="text-slate-400 text-lg md:text-xl font-medium leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
               Zapewniamy kompleksowe wsparcie w obszarze bezpieczeństwa i higieny pracy.
               Nasze rozwiązania gwarantują pełną zgodność z obowiązującymi przepisami prawa pracy i najwyższy standard ochrony Twoich pracowników.
             </p>
@@ -45,7 +45,7 @@ export default function BhpServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
             {bhpMainServices.map((service, index) => (
-              <div key={index} className={`bg-card-dark p-12 group hover:bg-primary transition-all duration-500 ${service.fullWidth ? 'lg:col-span-2' : ''}`}>
+              <div key={index} className={`bg-card-dark p-12 group hover:bg-primary transition-all duration-500 animate-fade-in hover:scale-105 transform origin-center ${service.fullWidth ? 'lg:col-span-2' : ''}`} style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="flex flex-col md:flex-row md:items-start gap-8">
                   <div className="w-16 h-16 flex-shrink-0 bg-primary/10 group-hover:bg-black flex items-center justify-center transition-colors rounded">
                     <span className="material-symbols-outlined text-primary group-hover:text-primary text-4xl">{service.icon}</span>

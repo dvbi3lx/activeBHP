@@ -15,7 +15,7 @@ export default function FireSafetyPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-20">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-20 animate-fade-in">
         <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
         <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
           <div
@@ -25,17 +25,17 @@ export default function FireSafetyPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-20 py-20">
           <div className="max-w-2xl">
-            <div className="flex items-start gap-4 mb-6">
+            <div className="flex items-start gap-4 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="h-[1px] w-12 bg-primary mt-2"></div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Ochrona Przeciwpożarowa</span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase">
+            <h1 className="text-5xl md:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
               PPOŻ I <span className="text-primary">PIERWSZA POMOC</span>
             </h1>
-            <p className="text-slate-400 text-lg md:text-xl mb-8 font-medium leading-relaxed">
+            <p className="text-slate-400 text-lg md:text-xl mb-8 font-medium leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
               Zapewniamy pełną zgodność z przepisami przeciwpożarowymi oraz uczymy ratować życie. Profesjonalne wsparcie dla Twojego biznesu.
             </p>
-            <Link href="#oferta" className="inline-flex items-center gap-3 bg-primary text-black px-8 py-4 font-black uppercase tracking-widest hover:bg-yellow-400 transition-all group">
+            <Link href="#oferta" className="inline-flex items-center gap-3 bg-primary text-black px-8 py-4 font-black uppercase tracking-widest hover:bg-yellow-400 hover:scale-105 transition-all group animate-fade-in" style={{ animationDelay: '0.4s' }}>
               Poznaj ofertę
               <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
@@ -44,7 +44,7 @@ export default function FireSafetyPage() {
       </section>
 
       {/* Audits Section */}
-      <section className="py-24 bg-background-dark border-t border-white/5" id="oferta">
+      <section className="py-24 bg-background-dark border-t border-white/5 animate-fade-in" id="oferta">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
