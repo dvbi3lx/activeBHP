@@ -16,40 +16,40 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
-        <div className="absolute left-0 top-0 w-1/2 h-full hidden lg:block">
+        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/70 to-background-dark/50 z-10"></div>
+        <div className="absolute left-0 top-0 w-1/2 h-full hidden lg:block opacity-15 mix-blend-overlay">
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172457_3ccad666-5424-4dc8-9dae-0f439649625c%20%281%29-Photoroom-mtXIpkdSkohJb25cY2ymjNHpdC7NCa.png"
             alt="Prezes ActiveBHP"
-            className="w-full h-full object-contain opacity-20"
+            className="w-full h-full object-contain"
             loading="lazy"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20 w-full">
           <div className="max-w-3xl">
             <div className="flex items-center gap-4 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="h-[1px] w-12 bg-primary"></div>
+              <div className="h-[2px] w-12 bg-primary"></div>
               <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold">Bezpieczeństwo Pracy</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white leading-none mb-8 tracking-tighter uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-8 tracking-tighter uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Z Nami <br/>
-              <span className="text-primary">Twoja firma</span><br/>
-              <span className="text-outline">czuje się bezpiecznie.</span>
+              <span className="text-primary drop-shadow-lg">Twoja firma</span><br/>
+              <span className="text-yellow-300 drop-shadow-lg">czuje się bezpiecznie.</span>
             </h1>
-            <p className="text-slate-400 max-w-2xl text-lg md:text-xl mb-12 font-medium leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <p className="text-slate-100 max-w-2xl text-lg md:text-xl mb-12 font-semibold leading-relaxed animate-fade-in drop-shadow-md" style={{ animationDelay: '0.3s' }}>
               Kompleksowe rozwiązania w zakresie bezpieczeństwa i higieny pracy. Oszczędzaj czas, unikaj kar i wypadków – my zadbamy o wszystko.
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <Link
                 href="/kontakt"
-                className="bg-primary text-black px-10 py-5 font-black uppercase tracking-widest flex items-center gap-3 hover:bg-yellow-400 hover:scale-105 transition-all group"
+                className="bg-primary text-black px-10 py-5 font-black uppercase tracking-widest flex items-center gap-3 hover:bg-yellow-400 hover:scale-110 transition-all group shadow-lg"
               >
                 Zapytaj o ofertę
                 <span className="material-icons-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </Link>
               <Link
                 href="/uslugi"
-                className="border-2 border-primary text-primary px-10 py-5 font-black uppercase tracking-widest hover:bg-primary hover:text-black transition-all"
+                className="border-2 border-yellow-300 text-yellow-300 px-10 py-5 font-black uppercase tracking-widest hover:bg-yellow-300 hover:text-black transition-all shadow-lg hover:scale-110"
               >
                 Poznaj usługi
               </Link>
@@ -236,6 +236,17 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* View All Services Button */}
+          <div className="flex justify-center mt-20 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <Link
+              href="/uslugi"
+              className="bg-primary text-black px-12 py-6 font-black uppercase tracking-widest text-lg hover:bg-yellow-400 hover:scale-110 transition-all shadow-lg flex items-center gap-3 group"
+            >
+              Wszystkie usługi
+              <span className="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </Link>
           </div>
         </div>
       </section>
