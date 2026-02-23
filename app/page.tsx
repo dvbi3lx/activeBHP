@@ -16,42 +16,41 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-background-dark">
-        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/98 to-background-dark/80 z-5"></div>
-        <div className="absolute right-0 top-1/3 -translate-y-1/2 w-80 h-96 hidden lg:flex items-center justify-center z-50">
+        <div className="absolute right-8 bottom-0 hidden lg:block z-30">
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172457_3ccad666-5424-4dc8-9dae-0f439649625c%20%281%29-Photoroom-mtXIpkdSkohJb25cY2ymjNHpdC7NCa.png"
             alt="Prezes ActiveBHP"
-            className="w-full h-full object-contain drop-shadow-xl"
+            className="h-[85vh] w-auto object-contain object-bottom"
             loading="lazy"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20 w-full">
-          <div className="max-w-lg">
-            <div className="flex items-center gap-2 mb-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="h-[1px] w-6 bg-primary"></div>
-              <span className="text-primary uppercase tracking-[0.1em] text-[9px] font-bold">Bezpieczeństwo</span>
+          <div className="max-w-xl">
+            <div className="flex items-center gap-3 mb-5 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="h-[2px] w-10 bg-primary"></div>
+              <span className="text-primary uppercase tracking-[0.2em] text-xs font-bold">Bezpieczeństwo Pracy</span>
             </div>
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-white leading-snug mb-5 tracking-tight uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-snug mb-5 tracking-tight uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Z Nami <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-300 to-primary">Twoja firma</span><br/>
+              <span className="text-primary">Twoja firma</span><br/>
               czuje się bezpiecznie.
             </h1>
-            <p className="text-slate-500 max-w-md text-[10px] md:text-[11px] mb-6 font-medium leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <p className="text-slate-400 max-w-md text-sm mb-8 font-medium leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
               Kompleksowe rozwiązania w zakresie bezpieczeństwa i higieny pracy. Oszczędzaj czas, unikaj kar i wypadków – my zadbamy o wszystko.
             </p>
-            <div className="flex flex-col sm:flex-row items-start gap-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row items-start gap-3 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <Link
                 href="/kontakt"
-                className="bg-gradient-to-r from-primary to-yellow-300 text-black px-5 py-2 font-bold uppercase tracking-widest flex items-center gap-1 hover:shadow-2xl hover:shadow-primary/50 hover:scale-105 transition-all group text-[8px]"
+                className="bg-primary text-black px-8 py-3 font-black uppercase tracking-widest flex items-center gap-2 hover:bg-yellow-400 hover:scale-105 transition-all group text-xs"
               >
-                Zapytaj
-                <span className="material-icons-outlined text-[9px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                Zapytaj o ofertę
+                <span className="material-icons-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </Link>
               <Link
                 href="/uslugi"
-                className="border-2 border-yellow-300 text-yellow-300 px-5 py-2 font-bold uppercase tracking-widest hover:bg-yellow-300 hover:text-black transition-all hover:shadow-2xl hover:shadow-yellow-300/50 hover:scale-105 text-[8px]"
+                className="border-2 border-primary text-primary px-8 py-3 font-black uppercase tracking-widest hover:bg-primary hover:text-black transition-all hover:scale-105 text-xs"
               >
-                Usługi
+                Poznaj usługi
               </Link>
             </div>
           </div>
