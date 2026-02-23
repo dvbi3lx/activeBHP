@@ -69,7 +69,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">
-            © {new Date().getFullYear()} ACTIVEBHP SOLUTIONS. Wszystkie prawa zastrzeżone.
+            © ACTIVEBHP. Wszystkie prawa zastrzeżone.
           </p>
           <div className="flex gap-8">
             <Link className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors" href="/polityka-prywatnosci">Polityka prywatności</Link>
