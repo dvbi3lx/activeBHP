@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden pt-20">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-start md:items-center overflow-hidden pt-28 md:pt-20">
         {/* Background Image & Overlays */}
         <div className="absolute inset-0 z-0">
           <img
@@ -31,17 +31,21 @@ export default function Home() {
         </div>
 
         {/* Restored CEO Image */}
-        <AnimatedSection variant="fade-left" delay={0.3} className="absolute right-8 bottom-0 hidden lg:block z-30">
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172457_3ccad666-5424-4dc8-9dae-0f439649625c%20%281%29-Photoroom-mtXIpkdSkohJb25cY2ymjNHpdC7NCa.png"
-            alt="Prezes ActiveBHP"
-            className="h-[85vh] w-auto object-contain object-bottom"
-            loading="lazy"
-          />
+        <AnimatedSection variant="fade-left" delay={0.3} className="absolute right-0 md:right-4 lg:right-8 bottom-32 sm:bottom-0 z-20 pointer-events-none flex justify-end w-full">
+          <div className="relative">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172457_3ccad666-5424-4dc8-9dae-0f439649625c%20%281%29-Photoroom-mtXIpkdSkohJb25cY2ymjNHpdC7NCa.png"
+              alt="Prezes ActiveBHP"
+              className="h-[55vh] sm:h-[60vh] md:h-[75vh] lg:h-[85vh] w-auto max-w-[150%] md:max-w-none object-contain object-bottom opacity-100"
+              loading="eager"
+            />
+            {/* Bottom gradient to fade the image into the background so it doesn't look cut off */}
+            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent pointer-events-none md:hidden"></div>
+          </div>
         </AnimatedSection>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20 w-full">
-          <div className="max-w-2xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-40 w-full pb-20 md:pb-0 md:py-20 flex flex-col justify-between min-h-[80vh] md:min-h-0 md:block">
+          <div className="max-w-2xl flex-grow md:flex-grow-0 z-40">
             <AnimatedSection delay={0.1}>
               <div className="flex items-center gap-3 mb-5">
                 <div className="h-[2px] w-10 bg-primary"></div>
@@ -50,37 +54,37 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2} variant="fade-right">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-snug mb-5 tracking-tight uppercase drop-shadow-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-snug mb-5 tracking-tight uppercase drop-shadow-2xl relative z-40">
                 Z Nami <br />
                 <span className="text-primary">Twoja firma</span><br />
                 czuje się bezpiecznie.
               </h1>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.3} variant="fade-up">
-              <p className="text-slate-200 max-w-lg text-lg mb-8 font-medium leading-relaxed drop-shadow-md">
+            <AnimatedSection delay={0.3} variant="fade-up" className="mb-[20vh] sm:mb-8">
+              <p className="text-slate-200 max-w-lg text-lg font-medium leading-relaxed drop-shadow-md relative z-40">
                 Kompleksowe rozwiązania w zakresie bezpieczeństwa i higieny pracy. Oszczędzaj czas, unikaj kar i wypadków – my zadbamy o wszystko.
               </p>
             </AnimatedSection>
-
-            <AnimatedSection delay={0.4} variant="scale-up">
-              <div className="flex flex-col sm:flex-row items-center gap-3">
-                <Link
-                  href="/kontakt"
-                  className="w-full sm:w-auto bg-primary text-black px-8 py-4 font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 hover:bg-white hover:scale-105 transition-all duration-300 group shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
-                >
-                  Zapytaj o ofertę
-                  <span className="material-icons-outlined text-base group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
-                </Link>
-                <Link
-                  href="/uslugi"
-                  className="w-full sm:w-auto px-8 py-4 font-bold uppercase tracking-widest text-sm text-white border border-white/20 hover:bg-white/10 hover:border-white flex items-center justify-center gap-2 transition-all duration-300 backdrop-blur-sm"
-                >
-                  Poznaj usługi
-                </Link>
-              </div>
-            </AnimatedSection>
           </div>
+
+          <AnimatedSection delay={0.4} variant="scale-up" className="mt-auto md:mt-0 relative z-50">
+            <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-sm md:max-w-none mx-auto md:mx-0 pt-[25vh] sm:pt-0">
+              <Link
+                href="/kontakt"
+                className="w-full sm:w-auto bg-primary text-black px-8 py-4 font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 hover:bg-white hover:scale-105 transition-all duration-300 group shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+              >
+                Zapytaj o ofertę
+                <span className="material-icons-outlined text-base group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
+              </Link>
+              <Link
+                href="/uslugi"
+                className="w-full sm:w-auto px-8 py-4 font-bold uppercase tracking-widest text-sm text-white border border-white/40 bg-black/40 hover:bg-white/10 hover:border-white flex items-center justify-center gap-2 transition-all duration-300 backdrop-blur-md"
+              >
+                Poznaj usługi
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -308,7 +312,7 @@ export default function Home() {
       </section>
 
       <Footer />
-    </main>
+    </main >
   );
 }
 
