@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="space-y-6">
             <div>
-              <img 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215412_cbb1c9d9-5e26-4a85-a625-8f43d85b5e9a-Photoroom-PMWkQqrELhslRqfSUwwJqZB0efJIp1.png" 
-                alt="ActiveBHP Logo" 
+              <img
+                src="/logo.jpg"
+                alt="ActiveBHP Logo"
                 className="h-16 w-auto"
               />
             </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { createMetadata } from "@/lib/metadata";
+import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata = createMetadata({
   title: 'Profesjonalne Wsparcie BHP i PPOŻ',
@@ -15,158 +16,86 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-background-dark">
-        <div className="absolute right-8 bottom-0 hidden lg:block z-30">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden pt-20">
+        {/* Background Image & Overlays */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/crane-hero-2.jpg"
+            alt="Prace dźwigowe - ActiveBHP"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-background-dark/20 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
+          <div className="absolute inset-0 bg-black/30 z-10"></div> {/* Extra contrast layer */}
+        </div>
+
+        {/* Restored CEO Image */}
+        <AnimatedSection variant="fade-left" delay={0.3} className="absolute right-8 bottom-0 hidden lg:block z-30">
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260219_172457_3ccad666-5424-4dc8-9dae-0f439649625c%20%281%29-Photoroom-mtXIpkdSkohJb25cY2ymjNHpdC7NCa.png"
             alt="Prezes ActiveBHP"
             className="h-[85vh] w-auto object-contain object-bottom"
             loading="lazy"
           />
-        </div>
+        </AnimatedSection>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20 w-full">
-          <div className="max-w-xl">
-            <div className="flex items-center gap-3 mb-5 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="h-[2px] w-10 bg-primary"></div>
-              <span className="text-primary uppercase tracking-[0.2em] text-xs font-bold">Bezpieczeństwo Pracy</span>
-            </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-snug mb-5 tracking-tight uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Z Nami <br/>
-              <span className="text-primary">Twoja firma</span><br/>
-              czuje się bezpiecznie.
-            </h1>
-            <p className="text-slate-400 max-w-md text-sm mb-8 font-medium leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              Kompleksowe rozwiązania w zakresie bezpieczeństwa i higieny pracy. Oszczędzaj czas, unikaj kar i wypadków – my zadbamy o wszystko.
-            </p>
-            <div className="flex flex-col sm:flex-row items-start gap-3 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <Link
-                href="/kontakt"
-                className="bg-primary text-black px-8 py-3 font-black uppercase tracking-widest flex items-center gap-2 hover:bg-yellow-400 hover:scale-105 transition-all group text-xs"
-              >
-                Zapytaj o ofertę
-                <span className="material-icons-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </Link>
-              <Link
-                href="/uslugi"
-                className="border-2 border-primary text-primary px-8 py-3 font-black uppercase tracking-widest hover:bg-primary hover:text-black transition-all hover:scale-105 text-xs"
-              >
-                Poznaj usługi
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Video Section */}
-      <section className="py-24 bg-card-dark/50 border-t border-white/5">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
-            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Zobacz nas w akcji</span>
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
-              ActiveBHP <span className="text-primary">w praktyce</span>
-            </h2>
-          </div>
-          <div className="relative w-full group animate-fade-in" style={{ paddingBottom: '56.25%', animationDelay: '0.1s' }}>
-            <iframe
-              className="absolute inset-0 w-full h-full rounded-lg border-2 border-primary/20 shadow-2xl shadow-primary/10 bg-black group-hover:shadow-2xl group-hover:shadow-primary/30 transition-all"
-              src="https://www.youtube.com/embed/UYbhQTa1M38"
-              title="ActiveBHP - Film promocyjny"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 bg-background-dark border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 animate-fade-in">
-            <div>
-              <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Co zyskujesz</span>
-              <h2 className="text-4xl md:text-6xl font-black uppercase leading-none text-white mb-6">
-                Korzyści dla <br/>
-                <span className="text-outline">Twojej Firmy.</span>
-              </h2>
-              <div className="border-l-4 border-primary pl-6 py-2">
-                <p className="text-slate-400 font-medium text-lg">
-                  Oszczędzaj czas i pieniądze dzięki rozwiązaniom szytym na miarę. Unikniesz kar, wypadków i stresujących kontroli – zapewnimy Ci spokój i pewność, że wszystko jest pod kontrolą.
-                </p>
+          <div className="max-w-2xl">
+            <AnimatedSection delay={0.1}>
+              <div className="flex items-center gap-3 mb-5">
+                <div className="h-[2px] w-10 bg-primary"></div>
+                <span className="text-primary uppercase tracking-[0.2em] text-sm md:text-base font-bold bg-background-dark/50 px-2 py-1 backdrop-blur-sm rounded-sm">Bezpieczeństwo Pracy</span>
               </div>
-            </div>
-            <div className="flex justify-center lg:justify-end group">
-              <img 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215237_ee740a4a-7682-4494-9d06-976f30e996a0-Photoroom-8rUxkqMi0kQR4rM2T0ivtrVyLA7BAS.png" 
-                alt="Safety Helmet" 
-                className="w-64 sm:w-72 md:w-80 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-            </div>
-          </div>
+            </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
-            {services.map((service, index) => (
-              <div key={index} className="bg-card-dark p-10 group hover:bg-primary transition-all duration-500 animate-fade-in hover:scale-105 transform origin-center" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-14 h-14 bg-primary group-hover:bg-black flex items-center justify-center mb-8 transition-colors">
-                  <span className="material-icons-outlined text-black group-hover:text-primary text-3xl">{service.icon}</span>
-                </div>
-                <h3 className="text-2xl font-black mb-4 uppercase group-hover:text-black transition-colors">{service.title}</h3>
-                <p className="text-slate-400 group-hover:text-black/70 mb-8 font-medium transition-colors">
-                  {service.description}
-                </p>
+            <AnimatedSection delay={0.2} variant="fade-right">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-snug mb-5 tracking-tight uppercase drop-shadow-2xl">
+                Z Nami <br />
+                <span className="text-primary">Twoja firma</span><br />
+                czuje się bezpiecznie.
+              </h1>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3} variant="fade-up">
+              <p className="text-slate-200 max-w-lg text-lg mb-8 font-medium leading-relaxed drop-shadow-md">
+                Kompleksowe rozwiązania w zakresie bezpieczeństwa i higieny pracy. Oszczędzaj czas, unikaj kar i wypadków – my zadbamy o wszystko.
+              </p>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.4} variant="scale-up">
+              <div className="flex flex-col sm:flex-row items-center gap-3">
                 <Link
-                  href={service.link}
-                  className="inline-flex items-center gap-2 text-primary group-hover:text-black font-bold uppercase text-xs tracking-widest transition-colors"
+                  href="/kontakt"
+                  className="w-full sm:w-auto bg-primary text-black px-8 py-4 font-black uppercase tracking-widest text-sm flex items-center justify-center gap-2 hover:bg-white hover:scale-105 transition-all duration-300 group shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
                 >
-                  {service.cta} <span className="material-icons-outlined text-sm">arrow_forward</span>
+                  Zapytaj o ofertę
+                  <span className="material-icons-outlined text-base group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
+                </Link>
+                <Link
+                  href="/uslugi"
+                  className="w-full sm:w-auto px-8 py-4 font-bold uppercase tracking-widest text-sm text-white border border-white/20 hover:bg-white/10 hover:border-white flex items-center justify-center gap-2 transition-all duration-300 backdrop-blur-sm"
+                >
+                  Poznaj usługi
                 </Link>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-24 bg-background-dark border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
-            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Opinie Klientów</span>
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
-              Co mówią o nas <span className="text-primary">nasi partnerzy</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-card-dark p-8 border border-white/10 animate-fade-in hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="material-symbols-outlined text-primary text-base">star</span>
-                  ))}
-                </div>
-                <p className="text-slate-300 mb-6 font-medium leading-relaxed">"{testimonial.text}"</p>
-                <div>
-                  <p className="text-white font-black text-sm">{testimonial.author}</p>
-                  <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">{testimonial.company}</p>
-                </div>
-              </div>
-            ))}
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Offerings Section */}
-      <section className="py-24 bg-card-dark/50 border-t border-white/5">
+      <section className="py-24 bg-card-dark/50 border-t border-white/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
+          <AnimatedSection variant="fade-up" delay={0.1} className="text-center mb-16">
             <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Nasze Usługi</span>
             <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
               Co <span className="text-primary">oferujemy</span>
             </h2>
-          </div>
+          </AnimatedSection>
 
           {/* BHP Category */}
-          <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <AnimatedSection variant="fade-up" delay={0.1} className="mb-16">
             <h3 className="text-2xl font-black text-primary uppercase mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined text-3xl">engineering</span>
               Bezpieczeństwo i Higiena Pracy
@@ -177,20 +106,21 @@ export default function Home() {
                 { title: 'Ocena Ryzyka Zawodowego', description: 'Profesjonalna ocena zagrożeń dla każdego stanowiska' },
                 { title: 'Instrukcje BHP', description: 'Opracowanie instrukcji dostosowanych do Twojej działalności' },
               ].map((item, idx) => (
-                <Link
-                  key={idx}
-                  href="/uslugi/bhp"
-                  className="p-6 bg-background-dark border border-white/10 group hover:border-primary hover:bg-primary/10 transition-all cursor-pointer transform hover:scale-105"
-                >
-                  <h4 className="font-black text-white mb-2 group-hover:text-primary transition-colors">{item.title}</h4>
-                  <p className="text-slate-500 text-sm group-hover:text-slate-300 transition-colors">{item.description}</p>
-                </Link>
+                <AnimatedSection key={idx} variant="fade-up" delay={0.1 + (idx * 0.1)}>
+                  <Link
+                    href="/uslugi/bhp"
+                    className="block h-full p-6 bg-background-dark border border-white/10 group hover:border-primary hover:bg-primary/10 transition-all cursor-pointer transform hover:scale-105"
+                  >
+                    <h4 className="font-black text-white mb-2 group-hover:text-primary transition-colors">{item.title}</h4>
+                    <p className="text-slate-500 text-sm group-hover:text-slate-300 transition-colors">{item.description}</p>
+                  </Link>
+                </AnimatedSection>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Szkolenia Category */}
-          <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <AnimatedSection variant="fade-up" delay={0.2} className="mb-16">
             <h3 className="text-2xl font-black text-primary uppercase mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined text-3xl">groups</span>
               Szkolenia Specjalistyczne
@@ -201,20 +131,21 @@ export default function Home() {
                 { title: 'Szkolenia Pierwsza Pomoc', description: 'Kursy udzielania pierwszej pomocy medycznej' },
                 { title: 'Szkolenia PPOŻ', description: 'Szkolenia z ochrony przeciwpożarowej' },
               ].map((item, idx) => (
-                <Link
-                  key={idx}
-                  href="/szkolenia"
-                  className="p-6 bg-background-dark border border-white/10 group hover:border-primary hover:bg-primary/10 transition-all cursor-pointer transform hover:scale-105"
-                >
-                  <h4 className="font-black text-white mb-2 group-hover:text-primary transition-colors">{item.title}</h4>
-                  <p className="text-slate-500 text-sm group-hover:text-slate-300 transition-colors">{item.description}</p>
-                </Link>
+                <AnimatedSection key={idx} variant="fade-up" delay={0.2 + (idx * 0.1)}>
+                  <Link
+                    href="/szkolenia"
+                    className="block h-full p-6 bg-background-dark border border-white/10 group hover:border-primary hover:bg-primary/10 transition-all cursor-pointer transform hover:scale-105"
+                  >
+                    <h4 className="font-black text-white mb-2 group-hover:text-primary transition-colors">{item.title}</h4>
+                    <p className="text-slate-500 text-sm group-hover:text-slate-300 transition-colors">{item.description}</p>
+                  </Link>
+                </AnimatedSection>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Pomiary & Audyty Category */}
-          <div className="mb-16 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <AnimatedSection variant="fade-up" delay={0.3} className="mb-16">
             <h3 className="text-2xl font-black text-primary uppercase mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined text-3xl">speed</span>
               Pomiary i Audyty
@@ -225,20 +156,21 @@ export default function Home() {
                 { title: 'Audyty Prac Podwodnych', description: 'Specjalistyczne audyty prac w warunkach ekstremalnych' },
                 { title: 'Systemy Zarządzania', description: 'Wdrażanie i audyt systemów bezpieczeństwa' },
               ].map((item, idx) => (
-                <Link
-                  key={idx}
-                  href="/uslugi/ppoz"
-                  className="p-6 bg-background-dark border border-white/10 group hover:border-primary hover:bg-primary/10 transition-all cursor-pointer transform hover:scale-105"
-                >
-                  <h4 className="font-black text-white mb-2 group-hover:text-primary transition-colors">{item.title}</h4>
-                  <p className="text-slate-500 text-sm group-hover:text-slate-300 transition-colors">{item.description}</p>
-                </Link>
+                <AnimatedSection key={idx} variant="fade-up" delay={0.3 + (idx * 0.1)}>
+                  <Link
+                    href="/uslugi/ppoz"
+                    className="block h-full p-6 bg-background-dark border border-white/10 group hover:border-primary hover:bg-primary/10 transition-all cursor-pointer transform hover:scale-105"
+                  >
+                    <h4 className="font-black text-white mb-2 group-hover:text-primary transition-colors">{item.title}</h4>
+                    <p className="text-slate-500 text-sm group-hover:text-slate-300 transition-colors">{item.description}</p>
+                  </Link>
+                </AnimatedSection>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* View All Services Button */}
-          <div className="flex justify-center mt-20 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <AnimatedSection variant="scale-up" delay={0.4} className="flex justify-center mt-20">
             <Link
               href="/uslugi"
               className="bg-primary text-black px-12 py-6 font-black uppercase tracking-widest text-lg hover:bg-yellow-400 hover:scale-110 transition-all shadow-lg flex items-center gap-3 group"
@@ -246,15 +178,122 @@ export default function Home() {
               Wszystkie usługi
               <span className="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-24 bg-card-dark/50 border-t border-white/5 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection delay={0.1} variant="fade-up" className="text-center mb-12">
+            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Zobacz nas w akcji</span>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+              ActiveBHP <span className="text-primary">w praktyce</span>
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2} variant="scale-up">
+            <div className="relative w-full group" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full rounded-lg border-2 border-primary/20 shadow-2xl shadow-primary/10 bg-black group-hover:shadow-2xl group-hover:shadow-primary/30 transition-all"
+                src="https://www.youtube.com/embed/UYbhQTa1M38"
+                title="ActiveBHP - Film promocyjny"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-24 bg-background-dark border-t border-white/5 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <AnimatedSection variant="fade-right" delay={0.1}>
+              <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Co zyskujesz</span>
+              <h2 className="text-4xl md:text-6xl font-black uppercase leading-none text-white mb-6">
+                Korzyści dla <br />
+                <span className="text-outline">Twojej Firmy.</span>
+              </h2>
+              <div className="border-l-4 border-primary pl-6 py-2">
+                <p className="text-slate-400 font-medium text-lg">
+                  Oszczędzaj czas i pieniądze dzięki rozwiązaniom szytym na miarę. Unikniesz kar, wypadków i stresujących kontroli – zapewnimy Ci spokój i pewność, że wszystko jest pod kontrolą.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection variant="fade-left" delay={0.2} className="flex justify-center lg:justify-end group">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215237_ee740a4a-7682-4494-9d06-976f30e996a0-Photoroom-8rUxkqMi0kQR4rM2T0ivtrVyLA7BAS.png"
+                alt="Safety Helmet"
+                className="w-64 sm:w-72 md:w-80 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </AnimatedSection>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
+            {services.map((service, index) => (
+              <AnimatedSection key={index} variant="fade-up" delay={0.1 * index}>
+                <div className="bg-card-dark p-10 group hover:bg-primary transition-all duration-500 hover:scale-105 transform origin-center h-full">
+                  <div className="w-14 h-14 bg-primary group-hover:bg-black flex items-center justify-center mb-8 transition-colors">
+                    <span className="material-icons-outlined text-black group-hover:text-primary text-3xl">{service.icon}</span>
+                  </div>
+                  <h3 className="text-2xl font-black mb-4 uppercase group-hover:text-black transition-colors">{service.title}</h3>
+                  <p className="text-slate-400 group-hover:text-black/70 mb-8 font-medium transition-colors">
+                    {service.description}
+                  </p>
+                  <Link
+                    href={service.link}
+                    className="inline-flex items-center gap-2 text-primary group-hover:text-black font-bold uppercase text-xs tracking-widest transition-colors mt-auto"
+                  >
+                    {service.cta} <span className="material-icons-outlined text-sm">arrow_forward</span>
+                  </Link>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-background-dark border-t border-white/5 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection variant="fade-up" delay={0.1} className="text-center mb-16">
+            <span className="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Opinie Klientów</span>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+              Co mówią o nas <span className="text-primary">nasi partnerzy</span>
+            </h2>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <AnimatedSection key={index} variant="fade-up" delay={0.1 * (index % 3)}>
+                <div className="bg-card-dark p-8 border border-white/10 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="flex gap-1 mb-6">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="material-symbols-outlined text-primary text-base">star</span>
+                      ))}
+                    </div>
+                    <p className="text-slate-300 mb-6 font-medium leading-relaxed">"{testimonial.text}"</p>
+                  </div>
+                  <div>
+                    <p className="text-white font-black text-sm">{testimonial.author}</p>
+                    <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">{testimonial.company}</p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="py-32 bg-primary animate-fade-in" style={{ animationDelay: '0.4s' }}>
-        <div className="max-w-5xl mx-auto px-4 text-center">
+      <section className="py-32 bg-primary overflow-hidden">
+        <AnimatedSection variant="scale-up" delay={0.2} className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-black leading-tight mb-8 uppercase tracking-tighter">
-            Zacznij działać <br className="hidden sm:block"/> bez stresu.
+            Zacznij działać <br className="hidden sm:block" /> bez stresu.
           </h2>
           <p className="text-black/70 text-lg md:text-xl font-bold max-w-2xl mx-auto mb-12 uppercase tracking-wide">
             Otrzymaj darmową konsultację i dowiedz się, jak w 48 godzin możesz mieć całą dokumentację BHP gotową. Bez papierologii, bez stresu – tylko rezultaty.
@@ -265,7 +304,7 @@ export default function Home() {
           >
             Bezpłatna konsultacja
           </Link>
-        </div>
+        </AnimatedSection>
       </section>
 
       <Footer />

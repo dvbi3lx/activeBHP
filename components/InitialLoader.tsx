@@ -9,7 +9,7 @@ export default function InitialLoader() {
   useEffect(() => {
     // Check if user has already seen the loader in this session
     const hasSeenLoader = sessionStorage.getItem('activebhp_loader_seen');
-    
+
     if (hasSeenLoader) {
       setIsLoading(false);
       return;
@@ -40,16 +40,16 @@ export default function InitialLoader() {
       <div className="max-w-3xl w-full px-8 text-center">
         {/* Logo */}
         <div className="flex items-center justify-center mb-12 animate-fade-in">
-          <img 
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215412_cbb1c9d9-5e26-4a85-a625-8f43d85b5e9a-Photoroom-PMWkQqrELhslRqfSUwwJqZB0efJIp1.png" 
-            alt="ActiveBHP Logo" 
+          <img
+            src="/logo.jpg"
+            alt="ActiveBHP Logo"
             className="h-32 w-auto"
           />
         </div>
 
         {/* Progress Bar */}
         <div className="relative w-full h-3 bg-white/10 mb-8 overflow-hidden rounded-full">
-          <div 
+          <div
             className="absolute inset-y-0 left-0 bg-primary transition-all duration-300 ease-out rounded-full"
             style={{ width: `${progress}%` }}
           />
@@ -61,7 +61,7 @@ export default function InitialLoader() {
             Przygotowujemy dla Ciebie <span className="text-primary">bezpieczne</span> rozwiązania
           </h2>
           <p className="text-slate-400 font-medium text-sm md:text-base max-w-2xl mx-auto">
-            Twój spokój i bezpieczeństwo Twojego zespołu to nasza misja. 
+            Twój spokój i bezpieczeństwo Twojego zespołu to nasza misja.
             Za chwilę przekonasz się, jak proste może być zapewnienie pełnej zgodności z przepisami BHP.
           </p>
         </div>

@@ -23,16 +23,17 @@ export default function LoadingPage() {
     <div className="fixed inset-0 z-[9999] bg-background-dark flex items-center justify-center">
       <div className="max-w-2xl px-8 text-center">
         {/* Logo */}
-        <div className="flex items-center justify-center gap-3 mb-12">
-          <div className="w-16 h-16 bg-primary flex items-center justify-center rounded">
-            <span className="material-symbols-outlined text-black font-bold text-3xl">shield</span>
-          </div>
-          <span className="text-4xl font-black tracking-tighter text-white uppercase">Active<span className="text-primary">BHP</span></span>
+        <div className="flex items-center justify-center mb-12">
+          <img
+            src="/logo.jpg"
+            alt="ActiveBHP Logo"
+            className="h-24 w-auto"
+          />
         </div>
 
         {/* Progress Bar */}
         <div className="relative w-full h-2 bg-white/10 mb-8 overflow-hidden">
-          <div 
+          <div
             className="absolute inset-y-0 left-0 bg-primary transition-all duration-300 ease-out"
             style={{ width: `${progress}%` }}
           />

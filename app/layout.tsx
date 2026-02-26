@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className="dark">
+    <html lang="pl" className="dark" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <link
@@ -56,6 +56,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${inter.variable} ${publicSans.variable} antialiased`}
+        suppressHydrationWarning
       >
         <InitialLoader />
         <script

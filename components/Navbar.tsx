@@ -8,15 +8,15 @@ import ViewTransitionLink from './ViewTransitionLink';
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   return (
     <nav className="fixed w-full z-50 bg-background-dark/70 backdrop-blur-lg border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <ViewTransitionLink href="/" className="flex items-center group">
-            <img 
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hf_20260220_215412_cbb1c9d9-5e26-4a85-a625-8f43d85b5e9a-Photoroom-PMWkQqrELhslRqfSUwwJqZB0efJIp1.png" 
-              alt="ActiveBHP Logo" 
+            <img
+              src="/logo.jpg"
+              alt="ActiveBHP Logo"
               className="h-10 sm:h-12 w-auto group-hover:opacity-90 transition-opacity"
               loading="eager"
             />
@@ -52,7 +52,7 @@ export default function Navbar() {
             <ViewTransitionLink href="/kontakt" className="hidden sm:block bg-primary text-black px-6 py-3 font-bold text-[11px] uppercase tracking-widest hover:bg-yellow-400 transition-all shadow-lg shadow-primary/10">
               Bezpłatny Audyt
             </ViewTransitionLink>
-            
+
             <button
               className="md:hidden w-10 h-10 flex items-center justify-center text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -69,24 +69,24 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-white/10 bg-background-dark/95 backdrop-blur-lg">
             <div className="px-4 py-6 space-y-4">
-              <ViewTransitionLink 
-                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/' ? 'text-primary' : 'text-white'}`} 
+              <ViewTransitionLink
+                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/' ? 'text-primary' : 'text-white'}`}
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Strona Główna
               </ViewTransitionLink>
-              <ViewTransitionLink 
-                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/o-firmie' ? 'text-primary' : 'text-white'}`} 
+              <ViewTransitionLink
+                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/o-firmie' ? 'text-primary' : 'text-white'}`}
                 href="/o-firmie"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 O firmie
               </ViewTransitionLink>
-              
+
               <div className="space-y-2">
-                <ViewTransitionLink 
-                  className="block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 text-white" 
+                <ViewTransitionLink
+                  className="block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 text-white"
                   href="/uslugi"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -101,30 +101,30 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <ViewTransitionLink 
-                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/szkolenia' ? 'text-primary' : 'text-white'}`} 
+              <ViewTransitionLink
+                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/szkolenia' ? 'text-primary' : 'text-white'}`}
                 href="/szkolenia"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Szkolenia
               </ViewTransitionLink>
-              <ViewTransitionLink 
-                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/szkolenia-online' ? 'text-primary' : 'text-white'}`} 
+              <ViewTransitionLink
+                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/szkolenia-online' ? 'text-primary' : 'text-white'}`}
                 href="/szkolenia-online"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Szkolenia Online
               </ViewTransitionLink>
-              <ViewTransitionLink 
-                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/kontakt' ? 'text-primary' : 'text-white'}`} 
+              <ViewTransitionLink
+                className={`block text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors py-2 ${pathname === '/kontakt' ? 'text-primary' : 'text-white'}`}
                 href="/kontakt"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Kontakt
               </ViewTransitionLink>
-              
-              <ViewTransitionLink 
-                href="/kontakt" 
+
+              <ViewTransitionLink
+                href="/kontakt"
                 className="block w-full bg-primary text-black px-6 py-4 font-bold text-xs uppercase tracking-widest hover:bg-yellow-400 transition-all text-center mt-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
