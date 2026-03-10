@@ -15,9 +15,9 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <ViewTransitionLink href="/" className="flex items-center group">
             <img
-              src="/logo.jpg"
+              src="/logo.jpg?v=6"
               alt="ActiveBHP Logo"
-              className="h-10 sm:h-12 w-auto group-hover:opacity-90 transition-opacity"
+              className="h-12 sm:h-14 w-auto object-contain group-hover:opacity-90 transition-opacity"
               loading="eager"
             />
           </ViewTransitionLink>

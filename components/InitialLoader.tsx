@@ -41,9 +41,9 @@ export default function InitialLoader() {
         {/* Logo */}
         <div className="flex items-center justify-center mb-12 animate-fade-in">
           <img
-            src="/logo.jpg"
+            src="/logo.jpg?v=6"
             alt="ActiveBHP Logo"
-            className="h-32 w-auto"
+            className="h-40 w-auto object-contain"
           />
         </div>
 

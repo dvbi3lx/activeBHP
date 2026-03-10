@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="space-y-6">
             <div>
               <img
-                src="/logo.jpg"
+                src="/logo.jpg?v=6"
                 alt="ActiveBHP Logo"
-                className="h-16 w-auto"
+                className="h-20 w-auto object-contain"
               />
             </div>
             <p className="text-slate-500 text-sm leading-relaxed font-medium">

@@ -25,9 +25,9 @@ export default function LoadingPage() {
         {/* Logo */}
         <div className="flex items-center justify-center mb-12">
           <img
-            src="/logo.jpg"
+            src="/logo.jpg?v=6"
             alt="ActiveBHP Logo"
-            className="h-24 w-auto"
+            className="h-32 w-auto object-contain"
           />
         </div>
 
