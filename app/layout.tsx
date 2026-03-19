@@ -3,6 +3,7 @@ import { Inter, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { baseMetadata } from "@/lib/metadata";
 import InitialLoader from "@/components/InitialLoader";
+import CookieBanner from "@/components/CookieBanner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -91,6 +92,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
